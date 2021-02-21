@@ -6,6 +6,7 @@ D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistlet
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\service\impl\RolePermissionRelationServiceImpl.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\service\RedisService.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\mapper\UserRoleRelationMapper.java
+D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\demo\demo1.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\service\RolePermissionRelationService.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\controller\RoleController.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\common\MyFilter.java
@@ -14,6 +15,7 @@ D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistlet
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\common\IErrorCode.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\service\UserRoleRelationService.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\config\RedisConfig.java
+D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\common\MyImgLoad.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\service\PermissionService.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\mapper\PermissionMapper.java
 D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\src\main\java\com\cn\mistletoe\common\FilterConfig.java

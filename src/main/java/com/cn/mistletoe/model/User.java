@@ -3,6 +3,7 @@ package com.cn.mistletoe.model;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.io.Serializable;
 import java.util.Date;
@@ -80,7 +81,7 @@ public class User implements Serializable {
     /**
      * 最后登录时间
      */
-    private LocalDateTime loginTime;
+    private String loginTime;
 
     /**
      * 帐号启用状态：0->禁用；1->启用

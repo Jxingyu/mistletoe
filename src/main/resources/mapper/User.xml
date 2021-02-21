@@ -49,4 +49,30 @@
     <select id="findAll" resultMap="BaseResultMap" parameterType="com.cn.mistletoe.model.User">
         select * from user where 1 = 1
     </select>
+    <update id="playerUpdate" parameterType="com.cn.mistletoe.model.User">
+     UPDATE user AS u set
+        <if test="username != null and username !='' ">
+            u.username=#{username},
+        </if>
+        <if test="sex != null and sex !='' ">
+            u.sex=#{sex},
+        </if>
+        <if test="phone != null and phone!= '' ">
+            u.phone=#{phone},
+        </if>
+        <if test="address != null and address!= '' ">
+            u.address=#{address},
+        </if>
+        <if test="createTime != null and createTime!= '' ">
+            u.create_time=#{createTime},
+        </if>
+            u.status=#{status},
+        <if test="password != null and password!= '' ">
+            u.password=#{password},
+        </if>
+         tips = ''
+        <where>
+            u.id = #{id}
+        </where>
+    </update>
 </mapper>

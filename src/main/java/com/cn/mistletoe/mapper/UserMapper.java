@@ -27,4 +27,5 @@ public interface UserMapper extends BaseMapper<User> {
 
     Vector<User> findAll();
 
+    Integer playerUpdate(User user);
 }

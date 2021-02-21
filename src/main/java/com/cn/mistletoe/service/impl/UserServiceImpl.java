@@ -145,4 +145,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return userMapper.findAll();
     }
 
+    /**
+     * 队员列表信息更新
+     * @param user
+     * @return
+     */
+    @Override
+    public Integer playerUpdate(User user) {
+        return userMapper.playerUpdate(user);
+    }
+
 }

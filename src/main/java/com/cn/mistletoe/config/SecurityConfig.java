@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/user/findAll"
                         ,"/role/findRoleName","/role/findNameByUserId","/role/updateUserRole","/role/updateUserRoleTwo"
                 ,"/role/findAll","/permission/selectPermission","/permission/selectPmsByRoleId","/permission/insertRolePms"
-                ,"/permission/selectRpr","/permission/deleteRpr","/user/select/statusCode").permitAll()
+                ,"/permission/selectRpr","/permission/deleteRpr","/user/select/statusCode","/user/player/update").permitAll()
 //                .antMatchers("/**").permitAll() //都可以访问
                 // .antMatchers("/users/**").hasRole("ADMIN") //需要相应的角色才能访问(某些路径（接口）需要什么权限或者什么角色才可以访问)
                 .anyRequest().authenticated() // 任何请求都需要认证

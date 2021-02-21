@@ -4,6 +4,7 @@ import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import io.swagger.models.auth.In;
 
 import java.util.List;
 import java.util.Vector;
@@ -26,4 +27,5 @@ public interface UserService extends IService<User> {
 
     Vector findAll();
 
+    Integer playerUpdate(User user);
 }
