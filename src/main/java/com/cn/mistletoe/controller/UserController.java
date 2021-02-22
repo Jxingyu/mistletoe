@@ -29,7 +29,7 @@ import java.util.Vector;
  */
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping(value = "/user")
 public class UserController {
     @Autowired
     UserService userService;
@@ -44,20 +44,30 @@ public class UserController {
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
 
+    /**
+     * 需要超级管理员(系统管理员)权限
+     *
+     * @param user
+     * @return
+     */
     @PostMapping("/player/update")
     public CommonResult update(@RequestBody User user) {
-        /*MyImgLoad.load(request);
-        User user = new User();
-        user.setId(Integer.parseInt((String) request.getAttribute("id")));
-        user.setIcon((String) request.getAttribute("imgHref"));
-        user.setUsername((String) request.getAttribute("username"));
-        user.setSex((String) request.getAttribute("sex"));
-        user.setPhone((String) request.getAttribute("phone"));
-        user.setAddress((String) request.getAttribute("address"));
-        user.setCreateTime((String) request.getAttribute("createDate"));
-        user.setStatus(Integer.parseInt((String) request.getAttribute("status")) );
-        user.setPassword((String) request.getAttribute("password"));*/
         Integer integer = userService.playerUpdate(user);
         return CommonResult.success(integer, "code:200");
+    }
+
+    /**
+     * 队员列表编辑窗口查询
+     * @param id
+     * @return
+     */
+    @GetMapping("/player/findPlayerById")
+    public void findPlayerById(@RequestParam Integer id,HttpServletResponse response) throws IOException {
+        User user = userService.findPlayerById(id);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("result", user);
+//        response.setContentType("application/json;charset=utf-8");
+//        String s = JSON.toJSONString(jsonObject);
+        response.getWriter().write(JSON.toJSONString(jsonObject));
     }
 }

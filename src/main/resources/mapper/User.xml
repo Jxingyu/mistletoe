@@ -75,4 +75,17 @@
             u.id = #{id}
         </where>
     </update>
+    <update id="uploadFile" parameterType="com.cn.mistletoe.model.User">
+        UPDATE user AS u set
+        <if test="icon != null and icon != ''">
+        u.icon=#{icon},
+        </if>
+         tips = ''
+        <where>
+            u.id = #{id}
+        </where>
+    </update>
+    <select id="findPlayerById" resultType="com.cn.mistletoe.model.User" parameterType="java.lang.Integer">
+        select * from user where id = #{id}
+    </select>
 </mapper>

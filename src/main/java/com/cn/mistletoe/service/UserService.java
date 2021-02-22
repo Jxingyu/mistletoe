@@ -1,5 +1,6 @@
 package com.cn.mistletoe.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
@@ -28,4 +29,8 @@ public interface UserService extends IService<User> {
     Vector findAll();
 
     Integer playerUpdate(User user);
+
+    Integer uploadFile(User user);
+
+    User findPlayerById(Integer id);
 }

@@ -1,5 +1,6 @@
 package com.cn.mistletoe.mapper;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -28,4 +29,8 @@ public interface UserMapper extends BaseMapper<User> {
     Vector<User> findAll();
 
     Integer playerUpdate(User user);
+
+    Integer uploadFile(User user);
+
+    User findPlayerById(Integer id);
 }

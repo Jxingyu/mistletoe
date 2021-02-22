@@ -1,5 +1,6 @@
 package com.cn.mistletoe.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.common.JwtTokenUtil;
 import com.cn.mistletoe.model.Permission;
@@ -147,12 +148,46 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     /**
      * 队员列表信息更新
+     * 密码更新 单独走security自带的passwordEncoder类下的.encode方法-- 进行加密
+     * 冻结权限 走Redis判断(更新Redis冻结次数(标识))
+     *
      * @param user
      * @return
      */
     @Override
     public Integer playerUpdate(User user) {
+        String password = user.getPassword();
+        Assert.notNull(password, "修改密码不能为空");
+        String nowEncode = passwordEncoder.encode(password);// 返回一个加密后密码
+        user.setPassword(nowEncode);
+        Integer nowStatus = user.getStatus();
+        Assert.notNull(nowStatus, "修改状态不能为空");
+        if (nowStatus == 0) { // 如果状态参数修改0 去Redis里直接冻结(登录失败次数修改为3)
+            redisService.set("LOGIN_USER_NAME:" + user.getUsername(), 3);
+        } else {// 解除冻结
+            redisService.set("LOGIN_USER_NAME:" + user.getUsername(), 0);
+        }
         return userMapper.playerUpdate(user);
+    }
+
+    /**
+     * 单文件上传(用户图片更新)
+     * @param user
+     * @return
+     */
+    @Override
+    public Integer uploadFile(User user) {
+        return userMapper.uploadFile(user);
+    }
+
+    /**
+     * 用户列表编辑窗口查询
+     * @param id
+     * @return
+     */
+    @Override
+    public User findPlayerById(Integer id) {
+        return userMapper.findPlayerById(id);
     }
 
 }

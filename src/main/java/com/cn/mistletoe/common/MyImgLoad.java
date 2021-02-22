@@ -6,19 +6,22 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 
 public class MyImgLoad {
     private static String imgurl = "/images/";
 
-    public static void load(HttpServletRequest request)  {
+    public static void load(HttpServletRequest request, MultipartFile multipartFile) {
         FileItemFactory factory = new DiskFileItemFactory();
-
         // 文件上传处理器
         ServletFileUpload upload = new ServletFileUpload(factory);
 
@@ -29,7 +32,6 @@ public class MyImgLoad {
         } catch (FileUploadException e) {
             e.printStackTrace();
         }
-
         // 对请求信息进行判断
         Iterator iter = items.iterator();
         while (iter.hasNext()) {
@@ -101,6 +103,48 @@ public class MyImgLoad {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    private static String UUIDFileName() {
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString();
+    }
 
+    /**
+     * 单文件上传
+     *
+     * @param request
+     * @param file
+     */
+    public static CommonResult loadOne(HttpServletRequest request, MultipartFile file) {
+
+        String fileName = null;
+        String path = "D:\\JavaProject\\xingyu\\springboot\\mistletoe_web_2.0\\static\\layui\\images";
+        try {
+            InputStream inputStream = file.getInputStream();
+            String name = file.getOriginalFilename();
+            String extendsName = name.substring(name.lastIndexOf(".") + 1);
+            if (extendsName.equalsIgnoreCase("jpg") || extendsName.equalsIgnoreCase("png") || extendsName.equalsIgnoreCase("bmp")
+            || extendsName.equalsIgnoreCase("jpeg")) {
+                fileName = UUIDFileName() + "." + extendsName;
+                request.setAttribute("imgHref", fileName);
+                String storeFile = path + "/" + fileName;
+                File filePath = new File(path);
+                if (!filePath.exists()) {
+                    filePath.mkdirs();
+                }
+                //写文件
+                OutputStream outputStream = new FileOutputStream(storeFile);
+                byte[] b = new byte[1024];
+                int len = -1;
+                while ((len = inputStream.read(b)) != -1) {
+                    outputStream.write(b, 0, len);
+                }
+                inputStream.close();
+                outputStream.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return CommonResult.success(fileName, "code:200");
     }
 }
