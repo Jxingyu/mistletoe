@@ -26,11 +26,13 @@ public interface UserService extends IService<User> {
 
     List<Permission> getPermissionByRoleId(Integer id);
 
-    Vector findAll();
+    Vector findAll(User user);
 
     Integer playerUpdate(User user);
 
     Integer uploadFile(User user);
 
     User findPlayerById(Integer id);
+
+    int findTotalCount(User user);
 }

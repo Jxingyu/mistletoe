@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -66,5 +67,5 @@ public class Role implements Serializable {
 
     private Integer sort;
 
-
+    ArrayList<Permission> permissions;
 }

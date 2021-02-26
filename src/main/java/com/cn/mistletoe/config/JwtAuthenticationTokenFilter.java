@@ -31,6 +31,7 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
+
     private static final Logger LOGGER = LoggerFactory.getLogger(JwtAuthenticationTokenFilter.class);
 
     @Autowired
@@ -63,7 +64,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 // 用户名不为空  并且SecurityContextHolder.getContext()  存储 权限的容器中没有相关权限则继续
                 boolean b = SecurityContextHolder.getContext().getAuthentication() == null;
                 if (username != null && b) { // && b == true null
-                    //从数据库读取用户信息
+                    //从数据库读取用户信息 userDetails带权限
                     UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
                     //校验token
                     if (jwtTokenUtil.validateToken(authToken, userDetails)) {

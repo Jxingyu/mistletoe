@@ -6,7 +6,6 @@ import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -27,7 +26,6 @@ public class LoginController {
 
     @PostMapping("/check")
     public void login(@RequestBody User user, HttpSession session, HttpServletResponse resp) throws IOException {
-//        System.out.println(user);
         CommonResult result = userService.login(user);
         String utilCode = (String) session.getAttribute("code");//拿到后台生成的验证码与用户传入model的验证码对比用
 //            if (utilCode.equalsIgnoreCase(user.getCode())) {// equalsIgnoreCase 不区分大小写对比

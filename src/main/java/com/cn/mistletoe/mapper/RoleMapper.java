@@ -3,6 +3,8 @@ package com.cn.mistletoe.mapper;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -25,4 +27,6 @@ public interface RoleMapper extends BaseMapper<Role> {
     Integer updateUserRoleTwo(Role role);
 
     List findAll();
+
+    ArrayList findAllRoles();
 }

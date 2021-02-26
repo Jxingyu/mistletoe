@@ -99,7 +99,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);// 如果不存在 创建 防止redis 报异常
         }
         int countNow = (int) redisService.get("LOGIN_USER_NAME:" + loginParams.getUsername());// countNow 更新后的实时 count
-        if ((matches && countNow < 3) || !redisService.hasKey("LOGIN_USER_NAME:" + loginParams.getUsername())) {// || redis不存在冻结用key value
+//        if ((matches && countNow < 3) || !redisService.hasKey("LOGIN_USER_NAME:" + loginParams.getUsername())) {// || redis不存在冻结用key value
+        if ((countNow < 3)) {// || redis不存在冻结用key value
             /*如果密码匹配成功并且未冻结 生成Token*/
             String generateTokenOne = jwtTokenUtil.generateToken(loginParams);// 传入查出的用户数据 用于返回Token
             // 登录成功后 将Redis 登录失败次数设为0
@@ -111,21 +112,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         return CommonResult.failed("failed");
     }
-
-//
-//    /**
-//     * cheackRedis
-//     *
-//     * @param loginParams
-//     * @return 登陆时去数据库匹配账号和密码
-//     * 然后不匹配的话 去redis+1
-//     * 如果满三次就去修改当前用户名的状态 为冻结 (暂时抹去他的登录权限 )
-//     */
-//    public CommonResult cheackRedisPassWord(User loginParams) {
-//
-//
-//        return CommonResult.success(loginParams.getStatus());
-//    }
 
 
     @Override
@@ -142,8 +128,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     /**
      * 用户查询所有
      */
-    public Vector findAll() {
-        return userMapper.findAll();
+    public Vector findAll(User user) {
+        return userMapper.findAll(user);
     }
 
     /**
@@ -188,6 +174,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public User findPlayerById(Integer id) {
         return userMapper.findPlayerById(id);
+    }
+
+    @Override
+    public int findTotalCount(User user) {
+        return userMapper.findTotalCount(user);
     }
 
 }

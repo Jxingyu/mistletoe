@@ -5,6 +5,7 @@ import com.cn.mistletoe.model.Role;
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.swagger.models.auth.In;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -27,4 +28,6 @@ public interface RoleService extends IService<Role> {
     Integer updateUserRoleTwo(Role role);
 
     List findAll();
+
+    ArrayList findAllRoles();
 }

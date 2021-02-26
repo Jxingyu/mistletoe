@@ -35,12 +35,12 @@ public class JwtTokenUtil {
     private Long expiration;// 过期
 
     /**
-     * 根据 负载（用户名 部门 权限 等） 生成JWT的token
+     * 根据 载荷（用户名 部门 权限 等） 生成JWT的token
      */
     private String generateToken(Map<String, Object> claims) {
         return Jwts.builder() //构建Jwt
-                .setClaims(claims) //负载
-                .setExpiration(generateExpirationDate()) // 过期事件
+                .setClaims(claims) // 放入 claims负载
+                .setExpiration(generateExpirationDate()) // 过期时间
                 .signWith(SignatureAlgorithm.HS512, secret)// 设置签名
                 .compact();
     }
@@ -114,9 +114,9 @@ public class JwtTokenUtil {
      */
     public String generateToken(User userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put(CLAIM_KEY_USERNAME, userDetails.getUsername());
-        claims.put(CLAIM_KEY_CREATED, new Date());
-        return generateToken(claims);
+        claims.put(CLAIM_KEY_USERNAME, userDetails.getUsername());// 将数据库查出来的用户名放入载荷Map
+        claims.put(CLAIM_KEY_CREATED, new Date());// 创建时间
+        return generateToken(claims);// 返回载荷
     }
 
     /**

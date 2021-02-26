@@ -6,6 +6,7 @@ import com.cn.mistletoe.model.Role;
 import com.cn.mistletoe.model.RolePermissionRelation;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,10 +22,11 @@ public interface PermissionMapper extends BaseMapper<Permission> {
 
     List selectPermission();
 
-    List selectPmsByRoleId(Long id);
+    ArrayList selectPmsByRoleId(Long id);
 
     Integer insertRolePms(@Param("rpr") List<RolePermissionRelation> rpr);
 
     List selectRpr(Long id);
 
+    String selectRoleById(Long id);
 }

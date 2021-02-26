@@ -31,7 +31,7 @@
     </select>
 
     <select id="getPermissionByRoleId" parameterType="java.lang.Integer" resultType="com.cn.mistletoe.model.Permission">
-        select * from  mistletoe.permission p where p.id in(
+        <!--select * from  mistletoe.permission p where p.id in(
             select rp.permission_id from role_permission_relation rp where rp.role_id  in
                 (select ur.role_id from  user_role_relation ur where ur.user_id =#{userId})
             UNION
@@ -39,7 +39,16 @@
         )
         and p.id not in(
             select up.permission_id  from user_permission_relation up where up.type=-1 and up.user_id=#{userId}
-        )
+        )-->select * from permission as p where p.id in (
+                    select rpr.permission_id  from role_permission_relation AS rpr
+                    where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = #{id})
+                    )
+<!--                           select * from wx_permission where id in
+      (select permission_id from wx_role_permission_relation where role_id in
+        (select id from wx_role where id in
+        (
+        select role_id from wx_user_role_relation where admin_id = #{userId}
+        )))-->
     </select>
 
     <select id="getUserById" resultMap="BaseResultMap" parameterType="com.cn.mistletoe.model.User">
@@ -48,6 +57,22 @@
 
     <select id="findAll" resultMap="BaseResultMap" parameterType="com.cn.mistletoe.model.User">
         select * from user where 1 = 1
+        <if test="username != null and username != ''">
+            and user.username like concat('%',#{username},'%')
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and user.create_time &gt;= #{startDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  user.create_time &lt;= #{endDate}
+        </if>
+        <if test="startDate != null and startDate != '' and endDate != null and endDate != ''">
+            and user.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="pageSize != null and pageSize !='' and curPage != null and curPage != ''">
+             <bind name="curPage" value="(curPage-1)*pageSize"/>
+             limit #{curPage},#{pageSize}
+        </if>
     </select>
     <update id="playerUpdate" parameterType="com.cn.mistletoe.model.User">
      UPDATE user AS u set
@@ -63,9 +88,8 @@
         <if test="address != null and address!= '' ">
             u.address=#{address},
         </if>
-        <if test="createTime != null and createTime!= '' ">
             u.create_time=#{createTime},
-        </if>
+            
             u.status=#{status},
         <if test="password != null and password!= '' ">
             u.password=#{password},
@@ -87,5 +111,9 @@
     </update>
     <select id="findPlayerById" resultType="com.cn.mistletoe.model.User" parameterType="java.lang.Integer">
         select * from user where id = #{id}
+    </select>
+    <select id="findTotalCount" resultType="int" parameterType="com.cn.mistletoe.model.User">
+        select count(*) from user
+
     </select>
 </mapper>

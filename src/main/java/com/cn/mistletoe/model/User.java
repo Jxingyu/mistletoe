@@ -6,14 +6,17 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import io.swagger.models.auth.In;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * <p>
@@ -26,7 +29,7 @@ import org.springframework.security.core.GrantedAuthority;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class User implements Serializable {
+public class User implements Serializable, UserDetails {
 
     private static final long serialVersionUID = 1L;
 
@@ -76,7 +79,7 @@ public class User implements Serializable {
     /**
      * 注册时间
      */
-    private String createTime;
+    private LocalDateTime createTime;
 
     /**
      * 最后登录时间
@@ -98,5 +101,60 @@ public class User implements Serializable {
      */
     private List<? extends GrantedAuthority> authorities;
 
+    /**
+     * 当前页数
+     */
 
+    private Integer curPage;
+
+    /**
+     *变动页数size
+     */
+    private Integer pageSize;
+
+    /**
+     * 判断用开始时间
+     */
+    private String startDate;
+
+    /**
+     * 判断用结束时间
+     */
+    private  String endDate;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities(){
+        return this.authorities;
+    }
+    @Override
+    public String getPassword(){
+        return this.password;
+    }
+
+
+    @Override
+    public String getUsername(){
+        return this.username;
+    }
+
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 }

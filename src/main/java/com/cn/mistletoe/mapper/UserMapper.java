@@ -26,11 +26,13 @@ public interface UserMapper extends BaseMapper<User> {
 
     List<User> getUserById(Integer idOne);
 
-    Vector<User> findAll();
+    Vector<User> findAll(User user);
 
     Integer playerUpdate(User user);
 
     Integer uploadFile(User user);
 
     User findPlayerById(Integer id);
+
+    int findTotalCount(User user);
 }

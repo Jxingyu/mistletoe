@@ -23,7 +23,7 @@
     <select id="selectPermission" resultMap="BaseResultMap" resultType="java.util.List">
           select * from permission where 1 = 1
     </select>
-    <select id="selectPmsByRoleId" resultMap="BaseResultMap" resultType="java.util.List" parameterType="com.cn.mistletoe.model.Permission" >
+    <select id="selectPmsByRoleId" resultMap="BaseResultMap" resultType="java.util.ArrayList" parameterType="com.cn.mistletoe.model.Permission" >
        SELECT * FROM permission WHERE permission.id IN (
         SELECT rpr.permission_id FROM role_permission_relation AS rpr WHERE rpr.role_id = #{id})
     </select>
@@ -37,6 +37,9 @@
 
     <select id="selectRpr" resultMap="BaseResultMap" parameterType="com.cn.mistletoe.model.RolePermissionRelation">
         select * from role_permission_relation where  role_permission_relation.role_id = #{roleId}
+    </select>
+    <select id="selectRoleById" resultType="java.lang.String" parameterType="com.cn.mistletoe.model.Permission">
+        select name from role where id = #{id}
     </select>
 
 </mapper>

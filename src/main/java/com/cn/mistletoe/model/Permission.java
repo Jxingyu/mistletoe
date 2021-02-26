@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+import org.springframework.security.core.GrantedAuthority;
 
 /**
  * <p>
@@ -22,7 +23,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @ToString
 
-public class Permission implements Serializable {
+public class Permission implements Serializable , GrantedAuthority {
 
     private static final long serialVersionUID = 1L;
     @TableId(value = "id", type = IdType.AUTO)
@@ -68,5 +69,17 @@ public class Permission implements Serializable {
      */
     private LocalDateTime createTime;
 
+    /**
+     *
+     */
+    private Integer permissionId;
 
+    /**
+     * 手动添加权限值
+     * @return
+     */
+    @Override
+    public String getAuthority() {
+        return value;
+    }
 }

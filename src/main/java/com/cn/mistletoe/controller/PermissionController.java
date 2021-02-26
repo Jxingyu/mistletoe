@@ -7,10 +7,13 @@ import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.RolePermissionRelation;
 import com.cn.mistletoe.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * <p>
@@ -22,11 +25,11 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/permission")
+//@PreAuthorize("hasAuthority('permission:module')")// 权限模块
 public class PermissionController {
 
     @Autowired
     PermissionService permissionService;
-
     @GetMapping("/selectPermission")
     public void selectPermission(HttpServletResponse response) throws IOException {
         List list = permissionService.selectPermission();
@@ -36,9 +39,16 @@ public class PermissionController {
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
 
+    /**
+     * 	将角色信息存与权限信息存入redis(角色名字+权限信息)
+     *  每小时更新一次redis中的角色与权限信息
+     * @param id
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("/selectPmsByRoleId")
     public void selectPmsByRoleId(@RequestParam Long id, HttpServletResponse response) throws IOException {
-        List list = permissionService.selectPmsByRoleId(id);
+        ArrayList list = permissionService.selectPmsByRoleId(id);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("result", list);
         response.setContentType("application/json;charset=utf-8");
@@ -67,6 +77,7 @@ public class PermissionController {
      * @throws IOException
      */
     @PostMapping("/insertRolePms")
+//    @PreAuthorize("hasAuthority('role:insertName')")// 权限新增
     public void insertRolePms(@RequestBody List<RolePermissionRelation> rpr, HttpServletResponse response) throws IOException {
         Integer integer = permissionService.insertRolePms(rpr);
         JSONObject jsonObject = new JSONObject();

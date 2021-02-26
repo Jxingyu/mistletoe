@@ -26,5 +26,13 @@
             (role_id =#{item.roleId} and permission_id =#{item.permissionId})
         </foreach>
     </delete>
+    <select id="findPermissionsByRoleId" resultType="com.cn.mistletoe.model.Permission" parameterType="com.cn.mistletoe.model.Permission">
+            select permission.* from permission left join role_permission_relation on
+            role_permission_relation.permission_id = permission.id
+            where role_permission_relation.role_id = #{roleId}
+    </select>
+    <select id="findAllPermission" resultType="com.cn.mistletoe.model.Permission" parameterType="com.cn.mistletoe.model.Permission">
+            select permission.* from permission where 1=1
+    </select>
 
 </mapper>

@@ -4,19 +4,13 @@ package com.cn.mistletoe.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.common.CommonResult;
-import com.cn.mistletoe.common.MyImgLoad;
 import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.service.UserService;
-import io.lettuce.core.dynamic.annotation.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import org.springframework.stereotype.Controller;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Vector;
 
 /**
@@ -35,10 +29,13 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/findAll")
-    public void findAll(HttpServletResponse response) throws IOException {
-        Vector vector = userService.findAll();
+    @PreAuthorize("hasAuthority('user:findName')")
+    public void findAll(HttpServletResponse response,User user) throws IOException {
+        Vector vector = userService.findAll(user);
+        int totalCount = userService.findTotalCount(user);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("result", vector);
+        jsonObject.put("totalCount", totalCount);
         response.setContentType("application/json;charset=utf-8");
 //        String s = JSON.toJSONString(jsonObject);
         response.getWriter().write(JSON.toJSONString(jsonObject));
@@ -46,7 +43,6 @@ public class UserController {
 
     /**
      * 需要超级管理员(系统管理员)权限
-     *
      * @param user
      * @return
      */
@@ -66,7 +62,7 @@ public class UserController {
         User user = userService.findPlayerById(id);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("result", user);
-//        response.setContentType("application/json;charset=utf-8");
+        response.setContentType("application/json;charset=utf-8");
 //        String s = JSON.toJSONString(jsonObject);
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
