@@ -51,7 +51,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain chain) throws ServletException, IOException {
         //从 header  中获取 Authorization
-        String authHeader = request.getHeader(this.tokenHeader);// tokenHeader格式: "bearer jghrwg5thfdsfsrr0asfdagsdf" -- from -- application.yml
+            String authHeader = request.getHeader(this.tokenHeader);// tokenBody格式: "bearer jghrwg5thfdsfsrr0asfdagsdf" -- from -- application.yml
         // 判断 authHeader  不为空  并且以 bearer 开头
         if (authHeader != null) {
             boolean b1 = StringUtils.startsWithIgnoreCase(authHeader,this.tokenHead);// startsWithIgnoreCase -- 判断字符以什么开头 忽略大小写 // 以 tokenHead: bearer 开头
@@ -83,4 +83,17 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         }
         chain.doFilter(request, response);
     }
+     /*
+        Jwt登录拦截过滤器
+        1、拦截用户请求、获取请求头
+        2、判断请求头是否为空并且是否是以bearer开头
+        3、截取bearer后面的字符串并去掉两端空格获取token
+        4、从token中获取用户名
+        5、判断用户名不为空，并且SecurityContextHolder.getContext() 存储权限的容器中没有相关权限则继续
+        6、根据用户名查询数据库
+        7、校验token，判断用户是否登录、是否有权限以及token是否过期
+        8、校验该用户拥有的权限
+        9、存入用户ip (0:0:0:0:0:0:0:1)
+        10、存入本线程的安全容器  在访问接口拿到返回值后 要去主动清除 权限，避免干扰其他的线程
+     */
 }

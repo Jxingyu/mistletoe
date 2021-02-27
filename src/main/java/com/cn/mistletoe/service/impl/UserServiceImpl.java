@@ -11,10 +11,12 @@ import com.cn.mistletoe.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 
@@ -49,6 +51,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * 接口: RedisService
      */
     private RedisService redisService;
+
+
+    @Value("${jwt.tokenHeader}")//Authorization  from -- application.yml
+    private String tokenHeader;
+
+    @Value("${jwt.tokenHead}")
+    private String tokenHead;//bearer  from -- application.yml
+
 
     /**
      * @param loginParams
@@ -103,12 +113,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if ((countNow < 3)) {// || redis不存在冻结用key value
             /*如果密码匹配成功并且未冻结 生成Token*/
             String generateTokenOne = jwtTokenUtil.generateToken(loginParams);// 传入查出的用户数据 用于返回Token
+            HashMap map = new HashMap();
+            map.put("bearer",tokenHead);
+            map.put("Authorization",tokenHeader);
+            map.put("generaToken",generateTokenOne);
             // 登录成功后 将Redis 登录失败次数设为0
             int countNowTwo = (int) redisService.get("LOGIN_USER_NAME:" + loginParams.getUsername());// countNowTwo 更新后的实时 count
             if (countNowTwo > 0) {
                 redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);
             }
-            return CommonResult.success(generateTokenOne, "TokenSuccess");// 成功后 可以存入前端的localStorage.setItem,localSession里
+            return CommonResult.success(map, "TokenSuccess");// 成功后 可以存入前端的localStorage.setItem,localSession里
         }
         return CommonResult.failed("failed");
     }
@@ -179,6 +193,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public int findTotalCount(User user) {
         return userMapper.findTotalCount(user);
+    }
+
+    /**
+     * 队员查询所有
+     * @param user
+     * @return
+     */
+    @Override
+    public Vector findPlayerAll(User user) {
+        return userMapper.findPlayerAll(user);
     }
 
 }

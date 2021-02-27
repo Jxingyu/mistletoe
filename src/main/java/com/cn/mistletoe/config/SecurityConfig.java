@@ -44,13 +44,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .formLogin() //基于Form表单登录验证
 //                .and()
 //                .userDetailsService(userDetailsServiceBean()); // 掉函数方式
-                .userDetailsService(userDetailsService);// 注入方式
+                .userDetailsService(userDetailsService);// 注入方式 // 提供一个通过登录名查询用户实体的函数
         // 放到账号密码认证前的一个过滤器里 让自定义的过滤器生效 通过权限对比用
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 
 //    @Autowired
-//    //   这是将用户存入内存的第一种方式
+//    //   这是将用户存入内存的第一种方式（== 放在代码中）
 //    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.inMemoryAuthentication() //认证信息存储到内存中
 //                .passwordEncoder(passwordEncoder())

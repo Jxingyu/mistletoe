@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * <p>
@@ -31,11 +32,13 @@ public class LoginController {
 //            if (utilCode.equalsIgnoreCase(user.getCode())) {// equalsIgnoreCase 不区分大小写对比
         if (utilCode.equals(user.getCaptcha())) {
             if (result.getMessage().equals("TokenSuccess")) {
-                String TokenData = (String) result.getData(); // 打印Token
-                System.out.println(TokenData);
+                long tokenMap = result.getCode(); // 打印Token
+                System.out.println(tokenMap);
                 // 5.得到返回结果
                 JSONObject jsonObject = new JSONObject();
-                jsonObject.put("result", result.getMessage());
+                jsonObject.put("code", tokenMap);
+                jsonObject.put("message", result.getMessage());
+                jsonObject.put("result", result.getData());
                 resp.getWriter().println(jsonObject);
             }// 冻结场合
             if (result.getMessage().equals("Account has been frozen 24 h")){

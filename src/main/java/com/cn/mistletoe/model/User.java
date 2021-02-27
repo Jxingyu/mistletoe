@@ -29,7 +29,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class User implements Serializable, UserDetails {
+public class User implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 

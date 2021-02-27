@@ -35,4 +35,6 @@ public interface UserMapper extends BaseMapper<User> {
     User findPlayerById(Integer id);
 
     int findTotalCount(User user);
+
+    Vector findPlayerAll(User user);
 }

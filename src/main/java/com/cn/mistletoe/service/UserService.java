@@ -35,4 +35,6 @@ public interface UserService extends IService<User> {
     User findPlayerById(Integer id);
 
     int findTotalCount(User user);
+
+    Vector findPlayerAll(User user);
 }
