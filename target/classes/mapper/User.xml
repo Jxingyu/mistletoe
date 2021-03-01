@@ -116,4 +116,31 @@
         select count(*) from user
 
     </select>
+    <select id="findPlayerAll" resultMap="BaseResultMap" parameterType="com.cn.mistletoe.model.User">
+         select * from user where 1 = 1
+        <if test="username != null and username != ''">
+            and user.username like concat('%',#{username},'%')
+        </if>
+        <if test="startDate != null and startDate != ''">
+            and user.create_time &gt;= #{startDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  user.create_time &lt;= #{endDate}
+        </if>
+        <if test="startDate != null and startDate != '' and endDate != null and endDate != ''">
+            and user.create_time between #{startDate} and #{endDate}
+        </if>
+        <if test="pageSize != null and pageSize !='' and curPage != null and curPage != ''">
+             <bind name="curPage" value="(curPage-1)*pageSize"/>
+             limit #{curPage},#{pageSize}
+        </if>
+    </select>
+    <insert id="register">
+            insert into user (username,sex,phone,address,create_time,status,password,role)
+            values(#{username},#{sex},#{phone},#{address},#{createTime},#{status},#{password},#{role})
+    </insert>
+    <select id="getMaxId" resultType="java.lang.Integer">
+            select max(id) from user;
+    </select>
+
 </mapper>

@@ -13,5 +13,9 @@
     <sql id="Base_Column_List">
         id, user_id, role_id
     </sql>
+    <insert id="roleNotNull" parameterType="com.cn.mistletoe.model.User"><!--注册默认角色赋值-->
+              insert into user_role_relation (user_id,role_id)
+            values(#{id},7)
+    </insert>
 
 </mapper>

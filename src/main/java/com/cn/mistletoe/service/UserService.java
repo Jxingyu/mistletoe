@@ -1,11 +1,8 @@
 package com.cn.mistletoe.service;
 
-import com.alibaba.fastjson.JSONObject;
-import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import io.swagger.models.auth.In;
 
 import java.util.List;
 import java.util.Vector;
@@ -20,7 +17,7 @@ import java.util.Vector;
  */
 public interface UserService extends IService<User> {
 
-    CommonResult login(User user);
+    Object login(User user);
 
     User getUserByUsername(String username);
 
@@ -37,4 +34,6 @@ public interface UserService extends IService<User> {
     int findTotalCount(User user);
 
     Vector findPlayerAll(User user);
+
+    int register(User user);
 }

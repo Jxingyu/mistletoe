@@ -27,7 +27,7 @@ public class LoginController {
 
     @PostMapping("/check")
     public void login(@RequestBody User user, HttpSession session, HttpServletResponse resp) throws IOException {
-        CommonResult result = userService.login(user);
+        CommonResult result = (CommonResult) userService.login(user);
         String utilCode = (String) session.getAttribute("code");//拿到后台生成的验证码与用户传入model的验证码对比用
 //            if (utilCode.equalsIgnoreCase(user.getCode())) {// equalsIgnoreCase 不区分大小写对比
         if (utilCode.equals(user.getCaptcha())) {

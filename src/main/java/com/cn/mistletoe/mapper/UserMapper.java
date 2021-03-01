@@ -37,4 +37,8 @@ public interface UserMapper extends BaseMapper<User> {
     int findTotalCount(User user);
 
     Vector findPlayerAll(User user);
+
+    int register(User user);
+
+    int getMaxId();
 }

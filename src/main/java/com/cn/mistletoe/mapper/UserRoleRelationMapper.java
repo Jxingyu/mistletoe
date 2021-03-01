@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface UserRoleRelationMapper extends BaseMapper<UserRoleRelation> {
 
+    int roleNotNull(Integer id);
 }

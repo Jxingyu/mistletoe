@@ -135,4 +135,12 @@
              limit #{curPage},#{pageSize}
         </if>
     </select>
+    <insert id="register">
+            insert into user (username,sex,phone,address,create_time,status,password,role)
+            values(#{username},#{sex},#{phone},#{address},#{createTime},#{status},#{password},#{role})
+    </insert>
+    <select id="getMaxId" resultType="java.lang.Integer">
+            select max(id) from user;
+    </select>
+
 </mapper>

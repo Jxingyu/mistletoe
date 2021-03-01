@@ -3,9 +3,11 @@ package com.cn.mistletoe.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.common.JwtTokenUtil;
+import com.cn.mistletoe.mapper.UserRoleRelationMapper;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.mapper.UserMapper;
+import com.cn.mistletoe.model.UserRoleRelation;
 import com.cn.mistletoe.service.RedisService;
 import com.cn.mistletoe.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -32,6 +34,9 @@ import java.util.Vector;
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private UserRoleRelationMapper userRoleRelationMapper;
 
     @Autowired
     /**
@@ -81,50 +86,38 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             if (LoginCount >= 3) {
                 return CommonResult.success(LoginCount, "Account has been frozen 24 h");// 账户已被冻结
             }
+        } else {
+            redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);// 如果不存在 创建 防止redis 报异常
         }
         // 查询当前登录用户 数据(登陆用户的数据和数据库账号和密码是否匹配)
         User nowUser = userMapper.getUserByUsername(loginParams.getUsername());
         // 对比传入的密码和数据库查出来的密码 返回一个布尔类型
         boolean matches = passwordEncoder.matches(loginParams.getPassword(), nowUser.getPassword());
         if (!matches) {// 如果不匹配 ↓
-            if (!redisService.hasKey("LOGIN_USER_NAME:" + loginParams.getUsername())) {
-                redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);// 如果不存在 创建 防止redis 报异常
-            }
             int count = (int) redisService.get("LOGIN_USER_NAME:" + loginParams.getUsername());
             redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), count + 1, 3600L);// 记录登录失败第一次 一小时内用户登陆失败三次以上冻结24小时的功能记录 每次登录失败+1
+            //每次登录对当前账户的登录次数 做缓存 登录60分钟内 登录错误次数超过3次，账户锁定24小时
+            // 等于3 时代表开始冻结账户，设置过期时间为24小时，并且对 value+1
+            if (count >= 2) {
+                redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), count + 1, 3600L * 24);
+                return CommonResult.success(loginParams.getUsername(), "Account has been frozen 24 h");
+            }
+            return CommonResult.failed("failed");
+        } else {// 登录成功
+            redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);// 登录成功后 将Redis 登录失败次数设为0
             int countNow = (int) redisService.get("LOGIN_USER_NAME:" + loginParams.getUsername());// countNow 更新后的实时 count
-            if (redisService.hasKey("LOGIN_USER_NAME:" + loginParams.getUsername())) {// 是否存在缓存里
-                //每次登录对当前账户的登录次数 做缓存 登录60分钟内 登录错误次数超过3次，账户锁定24小时
-                if (countNow >= 2) {
-                    // 等于3 时代表开始冻结账户，设置过期时间为24小时，并且对 value+1
-                    if (countNow >= 3) {
-                        redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), count + 1, 3600L * 24);
-                        return CommonResult.success(loginParams.getUsername(), "Account has been frozen 24 h");
-                    }
-                    redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), count + 1, 3600L);
-                }
+            if ((countNow == 0) || countNow <= 3) {
+
+                /*如果密码匹配成功并且未冻结 生成Token*/
+                String generateTokenOne = jwtTokenUtil.generateToken(loginParams);// 传入查出的用户数据 用于返回Token
+                HashMap map = new HashMap();
+                map.put("bearer", tokenHead);
+                map.put("Authorization", tokenHeader);
+                map.put("generaToken", generateTokenOne);
+                return CommonResult.success(map, "TokenSuccess");
             }
         }
-        if (!redisService.hasKey("LOGIN_USER_NAME:" + loginParams.getUsername())) {
-            redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);// 如果不存在 创建 防止redis 报异常
-        }
-        int countNow = (int) redisService.get("LOGIN_USER_NAME:" + loginParams.getUsername());// countNow 更新后的实时 count
-//        if ((matches && countNow < 3) || !redisService.hasKey("LOGIN_USER_NAME:" + loginParams.getUsername())) {// || redis不存在冻结用key value
-        if ((countNow < 3)) {// || redis不存在冻结用key value
-            /*如果密码匹配成功并且未冻结 生成Token*/
-            String generateTokenOne = jwtTokenUtil.generateToken(loginParams);// 传入查出的用户数据 用于返回Token
-            HashMap map = new HashMap();
-            map.put("bearer",tokenHead);
-            map.put("Authorization",tokenHeader);
-            map.put("generaToken",generateTokenOne);
-            // 登录成功后 将Redis 登录失败次数设为0
-            int countNowTwo = (int) redisService.get("LOGIN_USER_NAME:" + loginParams.getUsername());// countNowTwo 更新后的实时 count
-            if (countNowTwo > 0) {
-                redisService.set("LOGIN_USER_NAME:" + loginParams.getUsername(), 0);
-            }
-            return CommonResult.success(map, "TokenSuccess");// 成功后 可以存入前端的localStorage.setItem,localSession里
-        }
-        return CommonResult.failed("failed");
+        return CommonResult.success("failed");
     }
 
 
@@ -172,6 +165,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     /**
      * 单文件上传(用户图片更新)
+     *
      * @param user
      * @return
      */
@@ -182,6 +176,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     /**
      * 用户列表编辑窗口查询
+     *
      * @param id
      * @return
      */
@@ -197,12 +192,31 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     /**
      * 队员查询所有
+     *
      * @param user
      * @return
      */
     @Override
     public Vector findPlayerAll(User user) {
         return userMapper.findPlayerAll(user);
+    }
+
+    /**
+     * 注册
+     * 暂无角色
+     *
+     * @param user
+     * @return
+     */
+    @Override
+    public int register(User user) {
+        String encode = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encode);
+        user.setRole("暂无角色");
+        userMapper.register(user);
+        // 查询最大Id最新Id用来更新 去user_role_relation表 去赋一个默认角色(暂无角色)
+        final int maxId = userMapper.getMaxId();
+        return userRoleRelationMapper.roleNotNull(maxId);
     }
 
 }

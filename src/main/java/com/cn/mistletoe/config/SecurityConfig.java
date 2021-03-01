@@ -31,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code").permitAll()
+                .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/register/check").permitAll()
     /*            .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/user/findAll"
                         ,"/role/findRoleName","/role/findNameByUserId","/role/updateUserRole","/role/updateUserRoleTwo"
                 ,"/role/findAll","/permission/selectPermission","/permission/selectPmsByRoleId","/permission/insertRolePms"

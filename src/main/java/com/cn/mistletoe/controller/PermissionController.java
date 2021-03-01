@@ -40,6 +40,7 @@ public class PermissionController {
     }
 
     /**
+     *  权限模块--权限分配窗口查看
      * 	将角色信息存与权限信息存入redis(角色名字+权限信息)
      *  每小时更新一次redis中的角色与权限信息
      * @param id
@@ -47,6 +48,7 @@ public class PermissionController {
      * @throws IOException
      */
     @GetMapping("/selectPmsByRoleId")
+    @PreAuthorize("hasAuthority('permission:edit:read')")
     public void selectPmsByRoleId(@RequestParam Long id, HttpServletResponse response) throws IOException {
         ArrayList list = permissionService.selectPmsByRoleId(id);
         JSONObject jsonObject = new JSONObject();
@@ -71,13 +73,14 @@ public class PermissionController {
     }
 
     /**
+     * 权限模块——左边权限插入右边
      * 权限关联表 数据insert 可改为update
      * @param rpr
      * @param response
      * @throws IOException
      */
     @PostMapping("/insertRolePms")
-//    @PreAuthorize("hasAuthority('role:insertName')")// 权限新增
+    @PreAuthorize("hasAuthority('permission:insert')")// 权限新增
     public void insertRolePms(@RequestBody List<RolePermissionRelation> rpr, HttpServletResponse response) throws IOException {
         Integer integer = permissionService.insertRolePms(rpr);
         JSONObject jsonObject = new JSONObject();
@@ -85,7 +88,14 @@ public class PermissionController {
         //response.setContentType("application/json;charset=utf-8");
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
+
+    /**
+     * 权限模块——权限分配 右边数据删除左边
+     * @param rpr
+     * @return
+     */
     @PostMapping("/deleteRpr")
+    @PreAuthorize("hasAuthority('permission:delete')")// 权限删除
     public CommonResult deleteRpr(@RequestBody List<RolePermissionRelation>rpr){
         Integer integer = permissionService.deleteRpr(rpr);
         return CommonResult.success(integer,"delSuccess");

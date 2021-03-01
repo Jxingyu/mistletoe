@@ -61,13 +61,13 @@ public class UserController {
     }
 
     /**
-     * 队员模块--队员列表查看
+     * 队员模块--队员编辑窗口查看
      * 队员列表编辑窗口查询
      * @param id
      * @return
      */
     @GetMapping("/player/findPlayerById")
-    @PreAuthorize("hasAuthority('player:edit:list')")
+    @PreAuthorize("hasAuthority('player:edit:read')")
     public void findPlayerById(@RequestParam Integer id,HttpServletResponse response) throws IOException {
         User user = userService.findPlayerById(id);
         JSONObject jsonObject = new JSONObject();
@@ -77,6 +77,12 @@ public class UserController {
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
 
+    /**
+     * 队员模块-- 查询所有队员列表
+     * @param response
+     * @param user
+     * @throws IOException
+     */
     @GetMapping("/findPlayerAll")
     @PreAuthorize("hasAuthority('player:list')")
     public void findPlayerAll(HttpServletResponse response,User user) throws IOException {
