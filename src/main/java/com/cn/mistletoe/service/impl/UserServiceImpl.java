@@ -1,17 +1,14 @@
 package com.cn.mistletoe.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.common.JwtTokenUtil;
 import com.cn.mistletoe.mapper.UserRoleRelationMapper;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.mapper.UserMapper;
-import com.cn.mistletoe.model.UserRoleRelation;
 import com.cn.mistletoe.service.RedisService;
 import com.cn.mistletoe.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -209,14 +206,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * @return
      */
     @Override
-    public int register(User user) {
+    public CommonResult register(User user) {
         String encode = passwordEncoder.encode(user.getPassword());
         user.setPassword(encode);
-        user.setRole("暂无角色");
+//        user.setRole("暂无角色");
         userMapper.register(user);
         // 查询最大Id最新Id用来更新 去user_role_relation表 去赋一个默认角色(暂无角色)
-        final int maxId = userMapper.getMaxId();
-        return userRoleRelationMapper.roleNotNull(maxId);
+        final Integer maxId = userMapper.getMaxId();
+        HashMap map = new HashMap();
+        map.put("NewID",maxId);
+        userMapper.urrInsert(maxId);
+        return CommonResult.success(map,"NewID");
+    }
+
+    @Override
+    public Integer registerIconUpdate(User user) {
+        return userMapper.registerIconUpdate(user);
     }
 
 }

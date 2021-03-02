@@ -1,5 +1,6 @@
 package com.cn.mistletoe.service;
 
+import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -35,5 +36,7 @@ public interface UserService extends IService<User> {
 
     Vector findPlayerAll(User user);
 
-    int register(User user);
+    CommonResult register(User user);
+
+    Integer registerIconUpdate(User user);
 }

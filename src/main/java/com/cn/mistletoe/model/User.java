@@ -3,17 +3,11 @@ package com.cn.mistletoe.model;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.io.Serializable;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
-
-import io.swagger.models.auth.In;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

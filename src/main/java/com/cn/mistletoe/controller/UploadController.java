@@ -1,5 +1,6 @@
 package com.cn.mistletoe.controller;
 
+import cn.hutool.http.HttpRequest;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.common.MyImgLoad;
 import com.cn.mistletoe.model.User;
@@ -24,14 +25,32 @@ public class UploadController {
     @Autowired
     UserService userService;
 
+    /**
+     * 队员个人信息编辑功能
+     *
+     * @param id
+     * @param request
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @PostMapping("/player/iconUpdate")
-    public CommonResult uploadFile(@RequestParam int id, HttpServletRequest request,@RequestParam("icon") MultipartFile file) throws IOException {
-        MyImgLoad.loadOne(request,file);
+    public CommonResult uploadFile(@RequestParam int id, HttpServletRequest request, @RequestParam("icon") MultipartFile file) throws IOException {
+        MyImgLoad.loadOne(request, file);
         User user = new User();
         user.setId(id);
         user.setIcon((String) request.getAttribute("imgHref"));
-        Integer integer =userService.uploadFile(user);
-        return CommonResult.success(integer,"code:200");
+        Integer integer = userService.uploadFile(user);
+        return CommonResult.success(integer, "code:200");
     }
 
+    @PostMapping("/registerIconUpdate")
+    public CommonResult registerIconUpdate(@RequestParam int id,HttpServletRequest request, @RequestParam("icon") MultipartFile file) {
+        MyImgLoad.loadOne(request, file);
+        User user = new User();
+        user.setId(id);
+        user.setIcon((String) request.getAttribute("imgHref"));
+        Integer integer = userService.registerIconUpdate(user);
+        return CommonResult.success(integer, "code:200");
+    }
 }

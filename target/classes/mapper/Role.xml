@@ -27,7 +27,7 @@
 
     <select id="findNowRoleByUserId" resultMap="BaseResultMap" parameterType="com.cn.mistletoe.model.Role">
 
-                SELECT * FROM role WHERE role.id=(
+            SELECT * FROM role WHERE role.id in (
                         SELECT ur.role_id FROM user_role_relation AS ur WHERE ur.user_id = #{id})
 
     </select>
