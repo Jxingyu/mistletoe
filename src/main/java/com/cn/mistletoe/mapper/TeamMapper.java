@@ -6,5 +6,7 @@ import com.cn.mistletoe.model.Team;
 import java.util.Vector;
 
 public interface TeamMapper extends BaseMapper<Team> {
-    Vector findTeamAll();
+    Vector<Team> findTeamAll();
+
+
 }

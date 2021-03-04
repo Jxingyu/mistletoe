@@ -21,7 +21,7 @@ public class Team implements Serializable {
     /**
      * 团队编号
      */
-    private String number;
+    private Integer numbers;
     /**
      * 队员人数
      */

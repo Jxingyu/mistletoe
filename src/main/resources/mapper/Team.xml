@@ -5,7 +5,7 @@
     <resultMap id="BaseResultMap" type="com.cn.mistletoe.model.Team">
         <id column="id" property="id" />
         <result column="name" property="name" />
-        <result column="number" property="number" />
+        <result column="numbers" property="numbers" />
         <result column="count" property="count" />
         <result column="captain" property="captain" />
         <result column="assistant" property="assistant" />
@@ -15,10 +15,11 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, number, count, captain, assistant, coach, create_time
+        id, name, numbers, count, captain, assistant, coach, create_time
     </sql>
 
-    <select id="findTeamAll" resultType="java.util.Vector">
+    <select id="findTeamAll" resultType="com.cn.mistletoe.model.Team">
             select * from team where 1 = 1;
     </select>
+
 </mapper>

@@ -15,7 +15,8 @@ public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team> implements Te
     TeamMapper teamMapper;
 
     @Override
-    public Vector findTeamAll() {
+    public Vector<Team> findTeamAll() {
         return teamMapper.findTeamAll();
     }
+
 }
