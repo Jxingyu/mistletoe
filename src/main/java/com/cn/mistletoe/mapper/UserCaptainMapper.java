@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface UserCaptainMapper extends BaseMapper<UserCaptainRelation> {
     int updateNowCaptain(@Param("ucr") List<UserCaptainRelation> ucr);
+
+    void updateTeamCaptainColumn(@Param("userId") Integer userId, @Param("numbers") Integer numbers);
 }

@@ -16,6 +16,11 @@ public class UserCaptainServiceImpl extends ServiceImpl<UserCaptainMapper, UserC
 
     @Override
     public int updateNowCaptain(List<UserCaptainRelation> ucr) {
-        return userCaptainMapper.updateNowCaptain(ucr);
+        // 更新team表的队长列
+        ucr.stream().forEach(x->{
+            userCaptainMapper.updateTeamCaptainColumn(x.getUserId(),x.getNumbers());
+        });
+        int i = userCaptainMapper.updateNowCaptain(ucr);
+        return i;
     }
 }
