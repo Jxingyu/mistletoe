@@ -21,5 +21,20 @@
     <select id="findTeamAll" resultType="com.cn.mistletoe.model.Team">
             select * from team where 1 = 1;
     </select>
+    <!--    <select id="findTeamCount" resultType="int">
+            SELECT COUNT(*) FROM user_team_relation WHERE numbers = #{numbers}
+    </select>-->
 
+    <update id="editUpdate" parameterType="com.cn.mistletoe.model.Team">
+            update team set numbers = #{numbers},name = #{name},count = #{count},captain = #{captain},assistant = #{assistant},coach = #{coach},create_time = #{createTime}
+            where numbers = #{numbers}
+    </update>
+
+    <select id="findTeamById" resultMap="BaseResultMap">
+            select * from team where numbers = #{numbers}
+    </select>
+
+    <delete id="deleteTeam" parameterType="com.cn.mistletoe.model.Team">
+            delete from team where numbers = #{numbers}
+    </delete>
 </mapper>

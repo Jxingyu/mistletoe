@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -42,5 +43,5 @@ public class Team implements Serializable {
     /**
      * 创建时间
      */
-    private String createTime;
+    private LocalDateTime createTime;
 }

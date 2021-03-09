@@ -76,7 +76,7 @@ public class UserTeamRelationController {
      */
     @PostMapping("/insertUserTeam")
     public CommonResult insertUserTeam(@RequestBody List<UserTeamRelation> utr) {
-        Integer integer = userTeamService.insertUserTeam(utr);
+        CommonResult integer = userTeamService.insertUserTeam(utr);
         return CommonResult.success(integer, "200");
     }
 
@@ -137,6 +137,8 @@ public class UserTeamRelationController {
         response.setContentType("application/json;charset=utf-8");
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
+
+
 
 
 

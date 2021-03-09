@@ -27,6 +27,10 @@ public interface UserTeamMapper extends BaseMapper<UserTeamRelation> {
 
     List<UserCaptainRelation> selectUcr(int id);
 
-   int  updateNowCaptain(@Param("ucr") List<UserCaptainRelation> ucr);
+    List<UserTeamRelation> findPastTeamRecord(@Param("uUserId") int uUserId);
 
+    Integer getUsername(int iUserId);
+
+//    void deleteOldUTR(@Param("utr") List<UserTeamRelation> utr);
+    void deleteOldUTR(int uUserId);
 }

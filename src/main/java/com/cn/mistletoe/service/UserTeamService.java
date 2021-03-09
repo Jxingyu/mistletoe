@@ -1,6 +1,7 @@
 package com.cn.mistletoe.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.*;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public interface UserTeamService extends IService<UserTeamRelation> {
 
     Vector<UserTeamRelation> selectUtr(int id);
 
-    Integer insertUserTeam(List<UserTeamRelation> utr);
+    CommonResult insertUserTeam(List<UserTeamRelation> utr);
 
     Integer deleteUtrIdInUtr(List<UserTeamRelation> utr);
 
@@ -22,7 +23,6 @@ public interface UserTeamService extends IService<UserTeamRelation> {
 
     List<Team> selectCaptainIsUsername(int id);
 
-    int updateNowCaptain(List<UserCaptainRelation> ucr);
-
     List<UserCaptainRelation> selectUcr(int id);
+
 }

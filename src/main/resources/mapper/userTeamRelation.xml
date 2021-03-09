@@ -54,6 +54,24 @@
             select * from user_captain_relation where  user_captain_relation.numbers = #{id}
     </select>
 
+    <select id="findPastTeamRecord" resultType="com.cn.mistletoe.model.UserTeamRelation">
+            select * from user_team_relation where user_id = #{uUserId};
+    </select>
+
+    <select id="getUsername" resultType="java.lang.Integer">
+            select username from  team_record where username = (select username from user where id = #{iUserId})
+    </select>
+
+    <delete id="deleteOldUTR">
+        delete from user_team_relation where
+        user_id = #{uUserId}
+           <!-- <foreach collection="utr" item="item" index="index" separator="or">
+           (user_id = #{item.userId} and numbers = #{item.numbers})
+            </foreach>-->
+
+    </delete>
+
+
 
 
 

@@ -19,4 +19,20 @@ public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team> implements Te
         return teamMapper.findTeamAll();
     }
 
+    @Override
+    public Integer editUpdate(Team team) {
+        return teamMapper.editUpdate(team);
+    }
+
+    @Override
+    public Vector<Team> findTeamById(int numbers) {
+        return teamMapper.findTeamById(numbers);
+    }
+
+    @Override
+    public int deleteTeam(int numbers) {
+        return teamMapper.deleteTeam(numbers);
+    }
+
+
 }

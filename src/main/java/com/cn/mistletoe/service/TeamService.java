@@ -9,4 +9,10 @@ import java.util.Vector;
 public interface TeamService extends IService<Team> {
     Vector<Team>  findTeamAll();
 
+
+    Integer editUpdate(Team team);
+
+    Vector<Team> findTeamById(int numbers);
+
+    int deleteTeam(int numbers);
 }
