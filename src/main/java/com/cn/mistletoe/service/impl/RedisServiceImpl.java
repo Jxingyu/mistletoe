@@ -1,10 +1,13 @@
 package com.cn.mistletoe.service.impl;
 
+import com.cn.mistletoe.model.Sign;
 import com.cn.mistletoe.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -119,4 +122,17 @@ public class RedisServiceImpl implements RedisService {
             return false;
         }
     }
+
+    /**
+     *Redis里 key的模糊匹配方法
+     * @param pattern
+     * @return
+     */
+    @Override
+    public Set patternKeys(String pattern) {
+        Set keys = redisTemplate.keys(pattern + "*");
+        return keys;
+    }
+
+
 }

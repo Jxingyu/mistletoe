@@ -158,4 +158,17 @@
             values(#{maxId},7)
     </insert>
 
+    <select id="findUserByTeamNumbers" resultType="com.cn.mistletoe.model.UserTeamRelation">
+            SELECT * FROM user_team_relation WHERE numbers = #{numbers}
+    </select>
+
+    <select id="selectTeamNameByNumbers" resultType="java.lang.String">
+            SELECT name FROM team WHERE numbers = #{numbers}
+    </select>
+
+    <select id="selectUsernameByUserId" resultType="java.lang.String">
+            SELECT username FROM user WHERE id = #{userId}
+    </select>
+
+
 </mapper>

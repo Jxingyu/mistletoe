@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/register/check","/user/registerIconUpdate"
                 ,"/team/findTeamAll","/utr/select/user","/utr/select/userByTeamId","/utr/selectUtr","/utr/insertUserTeam","/utr/deleteUtrIdInUtr"
                 ,"/utr/select/captain","/utr/select/NowCaptain","/utr/selectUcr","/ucr/update/NowCaptain","/team/edit/update","/team/findTeamById"
-                ,"/team/deleteTeam/**","/teamRecord/findTeamRecord").permitAll()
+                ,"/team/deleteTeam/**","/teamRecord/findTeamRecord","/sign/insertRecord").permitAll()
     /*            .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/user/findAll"
                         ,"/role/findRoleName","/role/findNameByUserId","/role/updateUserRole","/role/updateUserRoleTwo"
                 ,"/role/findAll","/permission/selectPermission","/permission/selectPmsByRoleId","/permission/insertRolePms"

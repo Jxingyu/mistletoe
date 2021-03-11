@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.mistletoe.mapper.SignMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cn.mistletoe.model.Sign">
+        <id column="id" property="id" />
+        <result column="team_name" property="teamName" />
+        <result column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="sign_time" property="signTime" />
+        <result column="sign" property="sign" />
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,team_name,user_id,username,sign_time,sign
+    </sql>
+
+
+    <select id="select" resultType="java.lang.String">
+            SELECT name FROM team WHERE numbers IN (
+                SELECT numbers FROM user_team_relation WHERE user_id = #{userId})
+    </select>
+
+    <select id="selectUserName" resultType="java.lang.String">
+            SELECT username FROM user WHERE id = #{userId}
+    </select>
+
+
+
+    <insert id="putAll" parameterType="list">
+      insert into sign (team_name,user_id,username,sign_time,sign)
+              values
+                 <foreach collection="list" item="item" separator=",">
+                  (#{item.teamName},#{item.userId},#{item.username},#{item.signTime},#{item.sign})
+                </foreach>
+
+    </insert>
+
+
+</mapper>

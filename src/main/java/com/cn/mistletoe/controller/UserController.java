@@ -95,4 +95,5 @@ public class UserController {
 //        String s = JSON.toJSONString(jsonObject);
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
+
 }

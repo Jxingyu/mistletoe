@@ -1,5 +1,7 @@
 package com.cn.mistletoe.service;
 
+import java.util.Set;
+
 public interface RedisService {
     /**
      * 指定缓存失效时间
@@ -67,5 +69,10 @@ public interface RedisService {
      */
     boolean set(String key, Object value, long time);
 
-
+    /**
+     * Redis里 key的模糊匹配方法
+     * @param pattern
+     * @return
+     */
+    Set patternKeys(String pattern);
 }

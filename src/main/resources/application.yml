@@ -29,7 +29,7 @@ jwt:
   #定义我们的盐  密码
   secret: mySecret
   #过期时间
-  expiration: 1800
+  expiration: 3600
   #token 的类型 说明他以 bearer 开头
   tokenHead: bearer
   #token 对应的 key

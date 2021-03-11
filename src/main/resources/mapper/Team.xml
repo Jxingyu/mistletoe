@@ -37,4 +37,12 @@
     <delete id="deleteTeam" parameterType="com.cn.mistletoe.model.Team">
             delete from team where numbers = #{numbers}
     </delete>
+
+    <select id="findAllTeam" resultType="com.cn.mistletoe.model.Team">
+            SELECT * FROM team
+    </select>
+
+    <select id="selectTeamNumbers" resultType="com.cn.mistletoe.model.Team">
+        SELECT numbers FROM team;
+    </select>
 </mapper>

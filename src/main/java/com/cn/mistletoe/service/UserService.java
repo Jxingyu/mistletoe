@@ -4,6 +4,7 @@ import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.cn.mistletoe.model.UserTeamRelation;
 
 import java.util.List;
 import java.util.Vector;
@@ -39,4 +40,11 @@ public interface UserService extends IService<User> {
     CommonResult register(User user);
 
     Integer registerIconUpdate(User user);
+
+
+    List<UserTeamRelation> findUserByTeamNumbers(Integer numbers);
+
+    String selectTeamNameByNumbers(Integer numbers);
+
+    String selectUsernameByUserId(Integer userId);
 }

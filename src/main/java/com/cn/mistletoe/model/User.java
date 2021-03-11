@@ -116,6 +116,11 @@ public class User implements UserDetails {
      */
     private  String endDate;
 
+    /**
+     * 点到状态
+     */
+    private  String sign;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities(){
         return this.authorities;

@@ -6,6 +6,7 @@ import com.cn.mistletoe.mapper.UserRoleRelationMapper;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.mapper.UserMapper;
+import com.cn.mistletoe.model.UserTeamRelation;
 import com.cn.mistletoe.service.RedisService;
 import com.cn.mistletoe.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -214,14 +215,29 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // 查询最大Id最新Id用来更新 去user_role_relation表 去赋一个默认角色(暂无角色)
         final Integer maxId = userMapper.getMaxId();
         HashMap map = new HashMap();
-        map.put("NewID",maxId);
+        map.put("NewID", maxId);
         userMapper.urrInsert(maxId);
-        return CommonResult.success(map,"NewID");
+        return CommonResult.success(map, "NewID");
     }
 
     @Override
     public Integer registerIconUpdate(User user) {
         return userMapper.registerIconUpdate(user);
+    }
+
+    @Override
+    public List<UserTeamRelation> findUserByTeamNumbers(Integer numbers) {
+        return userMapper.findUserByTeamNumbers(numbers);
+    }
+
+    @Override
+    public String selectTeamNameByNumbers(Integer numbers) {
+        return userMapper.selectTeamNameByNumbers(numbers);
+    }
+
+    @Override
+    public String selectUsernameByUserId(Integer userId) {
+        return userMapper.selectUsernameByUserId(userId);
     }
 
 }

@@ -7,6 +7,7 @@ import com.cn.mistletoe.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Vector;
 
 @Service
@@ -32,6 +33,11 @@ public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team> implements Te
     @Override
     public int deleteTeam(int numbers) {
         return teamMapper.deleteTeam(numbers);
+    }
+
+    @Override
+    public List<Team> findAllTeam() {
+        return teamMapper.findAllTeam();
     }
 
 

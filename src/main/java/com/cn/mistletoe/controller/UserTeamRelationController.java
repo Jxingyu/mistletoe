@@ -138,9 +138,4 @@ public class UserTeamRelationController {
         response.getWriter().write(JSON.toJSONString(jsonObject));
     }
 
-
-
-
-
-
 }

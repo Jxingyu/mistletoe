@@ -66,7 +66,7 @@ public class UserTeamServiceImpl extends ServiceImpl<UserTeamMapper, UserTeamRel
                 Integer xNumbers = x.getNumbers();// 得到之前的团队ID
                 // 插入队员掉队之前数据(调队记录)
                 System.out.println(xUserId + "::" + xNumbers);
-                Integer sUserId = 0;
+                Integer sUserId = 0;// 初始化 防止指向同一地址值
                 sUserId = xUserId;
                 teamRecordMapper.insertPastTeamRecord(sUserId, xUserId, xNumbers);
             };

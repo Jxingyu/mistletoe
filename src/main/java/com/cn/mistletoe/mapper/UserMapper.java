@@ -5,6 +5,7 @@ import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.cn.mistletoe.model.UserTeamRelation;
 
 import java.util.List;
 import java.util.Vector;
@@ -46,4 +47,10 @@ public interface UserMapper extends BaseMapper<User> {
     Integer registerIconUpdate(User user);
 
     void urrInsert(Integer maxId);
+
+    List<UserTeamRelation> findUserByTeamNumbers(Integer numbers);
+
+    String selectTeamNameByNumbers(Integer numbers);
+
+    String selectUsernameByUserId(Integer userId);
 }

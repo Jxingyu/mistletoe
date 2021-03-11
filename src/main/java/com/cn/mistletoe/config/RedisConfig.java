@@ -42,7 +42,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     }
 
     @Bean// 加Bean注解的方法 会返回一个被IOC容器管理的对象-- cacheManager
-    public CacheManager cacheManager(RedisConnectionFactory factory) {
+    public CacheManager cachMeanager(RedisConnectionFactory factory) {
         RedisSerializer<String> redisSerializer = new StringRedisSerializer();
         FastJson2JsonRedisSerializer fastJsonSeial = new FastJson2JsonRedisSerializer(Object.class);
         ObjectMapper objectMapper = new ObjectMapper();

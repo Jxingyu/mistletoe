@@ -1,4 +1,4 @@
-package com.cn.mistletoe.common;
+package com.cn.mistletoe.scheduled;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.cn.mistletoe.mapper.PermissionMapper;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-@Component//@Component （把普通pojo实例化到spring容器中，相当于配置文件中的 ）
+@Component//@Component （把普通pojo实例化到spring容器中，相当于配置文件中的）
 //泛指各种组件，就是说当我们的类不属于各种归类的时候（不属于@Controller、@Services等的时候），我们就可以使用@Component来标注这个类。
 public class RoleAndPermissionSpringTask {
     @Autowired
