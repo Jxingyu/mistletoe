@@ -30,4 +30,25 @@ public class Sign implements Serializable {
     private String sign;
 
     private Integer nowNumbers;
+
+    /**
+     * 当前页数
+     */
+
+    private Integer curPage;
+
+    /**
+     *变动页数size
+     */
+    private Integer pageSize;
+
+    /**
+     * 判断用开始时间
+     */
+    private String startDate;
+
+    /**
+     * 判断用结束时间
+     */
+    private  String endDate;
 }

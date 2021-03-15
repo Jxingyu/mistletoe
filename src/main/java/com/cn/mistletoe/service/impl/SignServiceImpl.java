@@ -1,12 +1,10 @@
 package com.cn.mistletoe.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cn.mistletoe.config.JwtAuthenticationTokenFilter;
 import com.cn.mistletoe.mapper.SignMapper;
 import com.cn.mistletoe.mapper.TeamMapper;
 import com.cn.mistletoe.model.Sign;
 import com.cn.mistletoe.model.Team;
-import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.service.ISignService;
 import com.cn.mistletoe.service.RedisService;
 import org.slf4j.Logger;
@@ -15,9 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
 import java.util.Vector;
 
 @Service
@@ -37,6 +33,7 @@ public class SignServiceImpl extends ServiceImpl<SignMapper, Sign> implements IS
 
     /**
      * 提交到redis数据库
+     *
      * @param sign
      * @return
      */
@@ -67,8 +64,6 @@ public class SignServiceImpl extends ServiceImpl<SignMapper, Sign> implements IS
                 String teamName = signMapper.select(userId);
                 String username = signMapper.selectUserName(userId); // 查询用户名
                 sign.setNowNumbers(numbers1);
-/*                Object o = redisService.get("RBAC_SYSTEM:SIGN:TODAY_TEAM" + numbers1);
-                System.out.println(o);*/
                 List<Sign> signs = (List<Sign>) redisService.get("RBAC_SYSTEM:SIGN:TODAY_TEAM" + sign.getNowNumbers());
                 for (Sign s : signs) {
                     if (s.getUserId().intValue() == sign.getUserId().intValue()) {
@@ -81,7 +76,7 @@ public class SignServiceImpl extends ServiceImpl<SignMapper, Sign> implements IS
                 sb = redisService.set("RBAC_SYSTEM:SIGN:TODAY_TEAM" + numbers1, signs);
 
             } else {
-                LOGGER.info("checking Redis KEY RBAC_SYSTEM:SIGN:TODAY_TEAM HAS ? :{}", "无小队签到记录");
+                LOGGER.error("checking Redis KEY RBAC_SYSTEM:SIGN:TODAY_TEAM Has Does it exist ? :{}", "无小队签到记录表::或不在点到时间");
             }
         }
         return sb;
@@ -89,13 +84,53 @@ public class SignServiceImpl extends ServiceImpl<SignMapper, Sign> implements IS
 
     /**
      * 提交到 sql数据库
+     *
      * @param signList
      * @return
      */
     @Override
     public Integer putAll(List<Sign> signList) {
-         Integer integer = signMapper.putAll(signList);
+        Integer integer = signMapper.putAll(signList);
         return integer;
+    }
+
+    @Override
+    public Vector<Sign> selectSignRecord(Sign sign) {
+        Vector<Sign> vector = signMapper.selectSignRecord(sign);
+        return vector;
+    }
+
+    @Override
+    public int selectTotalCount(Sign sign) {
+        int vector = signMapper.selectTotalCount(sign);
+        return vector;
+    }
+
+    @Override
+    public int updateSign(Sign sign) {
+        if (sign.getSign().equals("normal")) {
+            sign.setSign("正常");
+        }
+        if (sign.getSign().equals("ask_for_leave")) {
+            sign.setSign("请假");
+        }
+        if (sign.getSign().equals("late")) {
+            sign.setSign("迟到");
+        }
+        if (sign.getSign().equals("leave_early")) {
+            sign.setSign("早退");
+        }
+        if (sign.getSign().equals("absenteeism")) {
+            sign.setSign("旷工");
+        }
+        int i = signMapper.updateSign(sign);
+        return i;
+    }
+
+    @Override
+    public String findSignById(int id) {
+        String i =   signMapper.findSignById(id);
+        return i;
     }
 
 

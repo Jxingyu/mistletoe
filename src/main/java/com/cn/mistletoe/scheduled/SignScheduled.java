@@ -61,6 +61,8 @@ public class SignScheduled {
                 list.stream().forEach(lists -> {
                     if (lists.getSign() == null || lists.getSign().equals("")) {
                         lists.setSign("未点到");
+                    }if (lists.getSignTime() == null || lists.getSignTime().equals("")) {
+                        lists.setSign("1970-01-01 00:00:00");
                     }
                 });
                 signList.addAll(list);
