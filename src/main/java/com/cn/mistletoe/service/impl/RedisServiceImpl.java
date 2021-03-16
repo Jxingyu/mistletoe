@@ -123,7 +123,7 @@ public class RedisServiceImpl implements RedisService {
         }
     }
 
-    /**
+    /** 新增
      *Redis里 key的模糊匹配方法
      * @param pattern
      * @return

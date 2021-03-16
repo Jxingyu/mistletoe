@@ -31,7 +31,36 @@
     </select>
 
     <select id="selectDailyEditMes" resultMap="BaseResultMap"  parameterType="java.lang.Integer">
-            SELECT assistant,coach FROM team WHERE numbers  = #{numbers}
+            SELECT id,assistant,coach FROM team WHERE numbers  = #{numbers}
     </select>
+
+    <insert id="insertDaily" parameterType="com.cn.mistletoe.model.Daily">
+            INSERT INTO daily(user_id,username,daily_title,coach,assistant,daily_content,harvest,shortage,submit_date,status)
+            VALUES (#{userId},#{username},#{dailyTitle},#{coach},#{assistant},#{dailyContent},#{harvest},#{shortage},#{submitDate},#{status})
+    </insert>
+
+    <insert id="saveDailyInRedis" parameterType="com.cn.mistletoe.model.Daily">
+            INSERT INTO daily(user_id,username,daily_title,coach,assistant,daily_content,harvest,shortage,submit_date,status)
+            VALUES (#{userId},#{username},#{dailyTitle},#{coach},#{assistant},#{dailyContent},#{harvest},#{shortage},#{submitDate},#{status})
+    </insert>
+
+    <select id="selectDailyById" resultType="com.cn.mistletoe.model.Daily">
+            SELECT * FROM daily WHERE id = #{id}
+    </select>
+
+    <update id="updateDraftDaily" parameterType="com.cn.mistletoe.model.Daily">
+            UPDATE daily SET
+            user_id = #{userId}
+            ,username = #{username}
+            ,daily_title = #{dailyTitle}
+            ,coach = #{coach}
+            ,assistant = #{assistant}
+            ,daily_content = #{dailyContent}
+            ,harvest = #{harvest}
+            ,shortage = #{shortage}
+            ,submit_date = #{submitDate}
+            ,status = #{status}
+            WHERE id = #{id}
+    </update>
 
 </mapper>

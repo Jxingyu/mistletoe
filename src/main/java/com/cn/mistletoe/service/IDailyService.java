@@ -11,4 +11,12 @@ public interface IDailyService extends IService<Daily> {
     Integer selectDailyId(String username);
 
     Vector<Daily> selectDailyEditMes(Integer userId);
+
+   int  insertDaily(Daily daily);
+
+    int saveDailyInRedis(Daily daily);
+
+    Vector<Daily> selectDailyById(int id);
+
+    int updateDraftDaily(Daily daily);
 }

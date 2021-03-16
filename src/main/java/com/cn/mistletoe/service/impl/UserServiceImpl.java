@@ -107,7 +107,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             if ((countNow == 0) || countNow <= 3) {
 
                 /*如果密码匹配成功并且未冻结 生成Token*/
-                String generateTokenOne = jwtTokenUtil.generateToken(loginParams);// 传入查出的用户数据 用于返回Token
+                String generateTokenOne = jwtTokenUtil.generateToken(loginParams);// 传入查出的用户数据 用于 生成返回Token
                 HashMap map = new HashMap();
                 map.put("bearer", tokenHead);
                 map.put("Authorization", tokenHeader);

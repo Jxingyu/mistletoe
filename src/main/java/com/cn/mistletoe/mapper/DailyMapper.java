@@ -13,4 +13,12 @@ public interface DailyMapper extends BaseMapper<Daily> {
     Integer selectNumbersByUserId(Integer userId);
 
     Vector<Daily> selectDailyEditMes(Integer numbers);
+
+    int insertDaily(Daily daily);
+
+    int saveDailyInRedis(Daily daily);
+
+    Vector<Daily> selectDailyById(int id);
+
+    int updateDraftDaily(Daily daily);
 }

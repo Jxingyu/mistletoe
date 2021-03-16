@@ -6,6 +6,7 @@ import com.cn.mistletoe.service.IDailyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Vector;
 
 @RestController
@@ -50,4 +51,52 @@ public class DailyController {
         Vector<Daily> vector = iDailyService.selectDailyEditMes(userId);
         return CommonResult.success(vector, "200");
     }
+
+    /**
+     * 提交日报到数据库
+     *
+     * @param daily
+     * @return
+     */
+    @PostMapping(value = {"/updateDaily"})
+    public CommonResult insertDaily(@RequestBody Daily daily) {
+        int i = iDailyService.insertDaily(daily);
+        return CommonResult.success(i, "200");
+    }
+
+    /**
+     * 保存日报草稿
+     *
+     * @param daily
+     * @return
+     */
+    @PostMapping(value = {"/saveDailyInRedis"})
+    public CommonResult saveDailyInRedis(@RequestBody Daily daily) {
+        int i = iDailyService.saveDailyInRedis(daily);
+        return CommonResult.success(i, "200");
+    }
+
+    /**
+     * 通过id查询草稿状态的 日志 赋值用
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping(value = {"/selectDailyById/{id}"})
+    public CommonResult selectDailyById(@PathVariable("id") int id) {
+        Vector<Daily> vector = iDailyService.selectDailyById(id);
+        return CommonResult.success(vector, "200");
+    }
+
+    /**
+     * 更新草稿状态的日志 为已经提交
+     * @param daily
+     * @return
+     */
+    @PostMapping(value = {"/updateDraftDaily"})
+    public CommonResult updateDraftDaily(@RequestBody Daily daily) {
+        int i = iDailyService.updateDraftDaily(daily);
+        return CommonResult.success(i, "200");
+    }
+
 }
