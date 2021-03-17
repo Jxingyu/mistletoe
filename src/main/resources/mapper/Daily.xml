@@ -63,4 +63,15 @@
             WHERE id = #{id}
     </update>
 
+    <update id="updateDailyStatus">
+            UPDATE daily SET
+            <if test="status != null and status != ''">
+            status = #{status}
+            </if>
+            <where>
+            id = #{id}
+            </where>
+    </update>
+
+
 </mapper>

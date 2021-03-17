@@ -6,6 +6,7 @@ import com.cn.mistletoe.service.IDailyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Vector;
 
@@ -90,6 +91,7 @@ public class DailyController {
 
     /**
      * 更新草稿状态的日志 为已经提交
+     *
      * @param daily
      * @return
      */
@@ -97,6 +99,21 @@ public class DailyController {
     public CommonResult updateDraftDaily(@RequestBody Daily daily) {
         int i = iDailyService.updateDraftDaily(daily);
         return CommonResult.success(i, "200");
+    }
+
+    @PostMapping(value = {"/updateDailyStatus/{id}/{status}"})
+    public CommonResult updateDailyStatus(@PathVariable("id") int id, @PathVariable("status") String status) {
+        int i = iDailyService.updateDailyStatus(id, status);
+        return CommonResult.success(i, "200");
+    }
+
+    @PostMapping(value = {"/ExportWord"})
+    public CommonResult ExportWord(@RequestBody Daily daily, HttpServletResponse response) {
+        //导出
+        String fileName  = iDailyService.ExportWord(daily,response);
+        return CommonResult.success(fileName, "200");
+        //下载
+//        iDailyService.downLoad(fileName,response);
     }
 
 }
