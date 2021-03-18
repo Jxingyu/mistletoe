@@ -32,17 +32,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/register/check","/user/registerIconUpdate"
-                ,"/team/findTeamAll","/utr/select/user","/utr/select/userByTeamId","/utr/selectUtr","/utr/insertUserTeam","/utr/deleteUtrIdInUtr"
-                ,"/utr/select/captain","/utr/select/NowCaptain","/utr/selectUcr","/ucr/update/NowCaptain","/team/edit/update","/team/findTeamById"
-                ,"/team/deleteTeam/**","/teamRecord/findTeamRecord","/sign/insertRecord","/sign/selectSignRecord","/sign/updateSign"
-                ,"/sign/findSignById","/daily/selectDailyAll/**","/daily/selectDailyId","/daily/selectDailyEditMesByUserId/**","/daily/updateDaily"
-                ,"/daily/saveDailyInRedis","/daily/selectDailyById/**","/daily/updateDraftDaily","/daily/updateDailyStatus/**"
-                ,"/daily/ExportWord").permitAll()
-    /*            .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check","/code","/user/findAll"
-                        ,"/role/findRoleName","/role/findNameByUserId","/role/updateUserRole","/role/updateUserRoleTwo"
-                ,"/role/findAll","/permission/selectPermission","/permission/selectPmsByRoleId","/permission/insertRolePms"
-                ,"/permission/selectRpr","/permission/deleteRpr","/user/select/statusCode","/user/player/update"
-                ,"/user/player/iconUpdate","/user/player/findPlayerById").permitAll()*/
+                ,"/utr/select/user","/utr/select/userByTeamId","/utr/selectUtr","/utr/insertUserTeam","/utr/deleteUtrIdInUtr"
+                ,"/utr/select/captain","/utr/select/NowCaptain","/utr/selectUcr","/team/findTeamById"
+                ,"/sign/findSignById","/daily/selectDailyId","/daily/selectDailyEditMesByUserId/**"
+                ,"/daily/selectDailyById/**","/daily/updateDraftDaily","/daily/updateDailyStatus/**").permitAll()
 //                .antMatchers("/**").permitAll() //都可以访问
                 // .antMatchers("/users/**").hasRole("ADMIN") //需要相应的角色才能访问(某些路径（接口）需要什么权限或者什么角色才可以访问)
                 .anyRequest().authenticated() // 任何请求都需要认证

@@ -4,10 +4,10 @@ import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Daily;
 import com.cn.mistletoe.service.IDailyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 import java.util.Vector;
 
 @RestController
@@ -35,10 +35,12 @@ public class DailyController {
      * @return
      */
     @GetMapping(value = {"/selectDailyAll/{username}"})
+    @PreAuthorize("hasAuthority('self:daily')")//我的日报
     public CommonResult selectDailyAll(@PathVariable("username") Integer userId) {
         Vector<Daily> vector = iDailyService.selectDailyAll(userId);
         return CommonResult.success(vector, "200");
     }
+
 
     /**
      * 查询出当前写日报用户的
@@ -60,6 +62,7 @@ public class DailyController {
      * @return
      */
     @PostMapping(value = {"/updateDaily"})
+    @PreAuthorize("hasAuthority('daily:update')")//提交日报
     public CommonResult insertDaily(@RequestBody Daily daily) {
         int i = iDailyService.insertDaily(daily);
         return CommonResult.success(i, "200");
@@ -72,6 +75,7 @@ public class DailyController {
      * @return
      */
     @PostMapping(value = {"/saveDailyInRedis"})
+    @PreAuthorize("hasAuthority('daily:save')")//保存日报为草稿
     public CommonResult saveDailyInRedis(@RequestBody Daily daily) {
         int i = iDailyService.saveDailyInRedis(daily);
         return CommonResult.success(i, "200");
@@ -107,13 +111,34 @@ public class DailyController {
         return CommonResult.success(i, "200");
     }
 
+    /**
+     * 审查日报
+     *
+     * @return
+     */
+    @GetMapping(value = {"/ReviewDailyAll"})
+    @PreAuthorize("hasAuthority('review:daily')")//审查日报
+    public CommonResult ReviewDailyAll() {
+        Vector<Daily> vector = iDailyService.ReviewDailyAll();
+        return CommonResult.success(vector, "200");
+    }
+
+    /**
+     * 导出Word文档到本地
+     * @param daily
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @PostMapping(value = {"/ExportWord"})
-    public CommonResult ExportWord(@RequestBody Daily daily, HttpServletResponse response) {
+    @PreAuthorize("hasAuthority('daily:export:word')")//导出日报
+    public CommonResult ExportWord(@RequestBody Daily daily, HttpServletResponse response) throws Exception {
         //导出
-        String fileName  = iDailyService.ExportWord(daily,response);
-        return CommonResult.success(fileName, "200");
+        String pathName = iDailyService.ExportWord(daily, response);
+
         //下载
-//        iDailyService.downLoad(fileName,response);
+//        iDailyService.downLoad(pathName, daily.getId(), response);
+        return CommonResult.success(pathName, "200");
     }
 
 }

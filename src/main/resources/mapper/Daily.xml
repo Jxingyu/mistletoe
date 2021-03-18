@@ -72,6 +72,9 @@
             id = #{id}
             </where>
     </update>
+    <select id="ReviewDailyAll" resultType="com.cn.mistletoe.model.Daily" parameterType="java.lang.Integer">
+            SELECT * FROM daily
+    </select>
 
 
 </mapper>

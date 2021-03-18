@@ -6,10 +6,17 @@ import com.cn.mistletoe.model.Daily;
 import com.cn.mistletoe.service.IDailyService;
 import com.cn.mistletoe.service.RedisService;
 
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.Version;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.URLEncoder;
 import java.util.*;
 
 @Service
@@ -73,26 +80,23 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
     }
 
     @Override
-    public String ExportWord(Daily daily, HttpServletResponse response) {
+    public Vector<Daily> ReviewDailyAll( ) {
+        Vector<Daily> vector = dailyMapper.ReviewDailyAll();
+        return vector;
+    }
+
+    /**
+     * 生成word文档
+     *
+     * @param daily
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public String ExportWord(Daily daily, HttpServletResponse response) throws Exception {
         Map<String, String> dataMap = new HashMap();
-
-        //姓名
-        dataMap.put("username", daily.getUsername());
-        //日期
-        dataMap.put("submitDate", daily.getSubmitDate());
-        // 教练
-        dataMap.put("coach", daily.getCoach());
-        // 助理
-        dataMap.put("assistant", daily.getAssistant());
-        //学习内容
-        dataMap.put("dailyTitle", daily.getDailyTitle());
-        //学习收获
-        dataMap.put("dailyContent", daily.getDailyContent());
-        //不足
-        dataMap.put("shortage", daily.getShortage());
-
-        return "0";
-/*        Map<String, String> dataMap = new HashMap();
+        String GetPath = "";
         try {
             //姓名
             dataMap.put("username", daily.getUsername());
@@ -102,59 +106,78 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
             dataMap.put("coach", daily.getCoach());
             // 助理
             dataMap.put("assistant", daily.getAssistant());
-            //学习内容
+            // 日报标题
             dataMap.put("dailyTitle", daily.getDailyTitle());
-            //学习收获
+            //学习内容
             dataMap.put("dailyContent", daily.getDailyContent());
+            //收获
+            dataMap.put("harvest", daily.getHarvest());
             //不足
             dataMap.put("shortage", daily.getShortage());
             //Configuration 用于读取ftl文件
             Configuration configuration = new Configuration(new Version("2.3.0"));
             configuration.setDefaultEncoding("utf-8");
-
-            *//**
-         * 指定ftl文件所在目录的路径，而不是ftl文件的路径
-         *//*
-            //我的路径是F：/idea_demo/日报.ftl
-            configuration.setDirectoryForTemplateLoading(new File("D:\\JavaProject\\CreateWord"));
-
+            /**
+             * 指定ftl文件所在目录的路径，而不是ftl文件的路径
+             */
+            //路径是D:\JavaProject\CreateWord\日报.ftl
+            configuration.setDirectoryForTemplateLoading(new File("D:\\JavaProject\\CreateWord\\"));
             //输出文档路径及名称
-            File outFile = new File("D:\\JavaProject\\CreateWord\\新日报.doc");
-
+            File outFile = new File("D:\\JavaProject\\CreateWord\\" + daily.getId() + dataMap.get("username") + ".doc");
+            GetPath = (String.valueOf(outFile));
             //以utf-8的编码读取ftl文件
-            Template template = configuration.getTemplate("模板.ftl", "utf-8");
+            Template template = configuration.getTemplate("model.ftl", "utf-8");
             Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile), "utf-8"), 10240);
             template.process(dataMap, out);
             out.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return "0";*/
-
+        return GetPath;
 
     }
-/*        //模板路径
-        String inputUrl = "D:\\JavaProject\\CreateWord\\模板.ftl";
-        //生成文件名字
-        String wordName = daily.getUsername() + ".docx";
-        //生成新word路径
-        String outFile = new String(new File("D:\\JavaProject\\CreateWord") + wordName);
-//        String outputUrl = CommonPath.WORD_DAILY.getValue() + wordName;
-        Map<String, String> tempMap = new HashMap<>();
-        tempMap.put("username", daily.getUsername());
-        tempMap.put("submitDate", daily.getSubmitDate());
-        tempMap.put("coach", daily.getCoach());
-        tempMap.put("assistant", daily.getAssistant());
-        tempMap.put("dailyTitle", daily.getDailyTitle());
-        tempMap.put("dailyContent", daily.getDailyContent());
-        tempMap.put("harvest", daily.getHarvest());
-        tempMap.put("shortage", daily.getShortage());
-        List<String[]> sList = new ArrayList<String[]>();
-        boolean b = WordUtil.changWord(inputUrl, outFile, tempMap, sList);
-        if (b) {
-            return wordName;
-        }
-        return null;*/
 
+    /**
+     * word文件 响应浏览器下载
+     *
+     * @param pathName 文件路径 和 文件名称
+     * @param response 响应头
+     */
+    @Override
+    public String downLoad(String pathName, int id, HttpServletResponse response) throws IOException {
+        String s = new String(pathName);
+        String a[] = s.split(String.valueOf(id));// 以当前id为切割
+        String wordName = a[1];// word文件名称
+        //获取服务器文件
+        String URL = pathName;
+
+        try {
+            String path = URL;
+            // path是指欲下载的文件的路径。
+            File file = new File(path);
+            // 取得文件名。
+            String filename = file.getName();
+            // 取得文件的后缀名。
+            String ext = filename.substring(filename.lastIndexOf(".") + 1).toUpperCase();
+            // 以流的形式下载文件。
+            InputStream fis = new BufferedInputStream(new FileInputStream(path));
+            byte[] buffer = new byte[fis.available()];
+            fis.read(buffer);
+            fis.close();
+            // 清空response
+            response.reset();
+            // 设置response的Header
+            response.addHeader("Content-Disposition", "attachment;filename=" + filename);
+            response.setContentType("application/octet-stream");
+            response.addHeader("Content-Length", "" + file.length());
+            OutputStream os = response.getOutputStream();
+            os.write(buffer);
+            os.flush();
+            os.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
 }

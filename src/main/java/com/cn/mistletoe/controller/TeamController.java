@@ -6,6 +6,7 @@ import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Team;
 import com.cn.mistletoe.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +26,7 @@ public class TeamController {
      * @return
      */
     @GetMapping("/findTeamAll")
+    @PreAuthorize("hasAuthority('team:select')")
     public CommonResult findTeamAll() {
         Vector<Team> vector = teamService.findTeamAll();
         return CommonResult.success(vector, "200");
@@ -37,6 +39,7 @@ public class TeamController {
      * @return
      */
     @PostMapping("/edit/update")
+    @PreAuthorize("hasAuthority('team:edit')")
     public CommonResult editUpdate(@RequestBody Team team) {
         Integer integer = teamService.editUpdate(team);
         return CommonResult.success(integer, "200");
@@ -73,6 +76,7 @@ public class TeamController {
      * @return
      */
     @PostMapping("/deleteTeam/{numbers}")
+    @PreAuthorize("hasAuthority('team:delete')")
     public CommonResult deleteTeam(@PathVariable("numbers") int numbers) {
         int result = teamService.deleteTeam(numbers);
         return CommonResult.success(result, "200");

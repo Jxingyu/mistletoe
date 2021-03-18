@@ -7,6 +7,7 @@ import com.cn.mistletoe.model.Sign;
 import com.cn.mistletoe.service.ISignService;
 import com.cn.mistletoe.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -23,9 +24,14 @@ public class SignController {
     @Autowired
     RedisService redisService;
 
+    /**
+     *
+     * @param sign
+     * @return
+     */
     @PostMapping("/insertRecord")
+    @PreAuthorize("hasAuthority('permission:attendance')")
     public CommonResult insertSignRecord(@RequestBody Sign sign) {
-
         Boolean b = iSignService.insertSignRecord(sign);
         return CommonResult.success(b, "200");
     }
@@ -38,6 +44,7 @@ public class SignController {
      * @throws IOException
      */
     @GetMapping("/selectSignRecord")
+    @PreAuthorize("hasAuthority('permission:attendance:notes')")
     public void selectSignRecord(Sign sign, HttpServletResponse response) throws IOException {
         Vector<Sign> v = iSignService.selectSignRecord(sign);
         int totalCount = iSignService.selectTotalCount(sign);
@@ -55,6 +62,7 @@ public class SignController {
      * @return
      */
     @PostMapping("/updateSign")
+    @PreAuthorize("hasAuthority('permission:record:update')")
     public CommonResult updateSign(@RequestBody Sign sign) {
         int i = iSignService.updateSign(sign);
         return CommonResult.success(i, "200");

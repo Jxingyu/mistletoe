@@ -24,4 +24,6 @@ public interface DailyMapper extends BaseMapper<Daily> {
     int updateDraftDaily(Daily daily);
 
     int updateDailyStatus(@Param("id") int id, @Param("status") String status);
+
+    Vector<Daily> ReviewDailyAll( );
 }
