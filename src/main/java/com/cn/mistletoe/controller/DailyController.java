@@ -3,6 +3,10 @@ package com.cn.mistletoe.controller;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.Daily;
 import com.cn.mistletoe.service.IDailyService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Vector;
 
+//swagger 控制层的类上
+@Api(tags="日报管理")
 @RestController
 @RequestMapping("/daily")
 public class DailyController {
@@ -105,6 +111,12 @@ public class DailyController {
         return CommonResult.success(i, "200");
     }
 
+    //swagger 方法上
+    @ApiOperation("日报状态更新")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id",value = "id标识",required = true,paramType = "path"),
+            @ApiImplicitParam(name = "status",value = "状态",required = true,paramType = "path")
+    })
     @PostMapping(value = {"/updateDailyStatus/{id}/{status}"})
     public CommonResult updateDailyStatus(@PathVariable("id") int id, @PathVariable("status") String status) {
         int i = iDailyService.updateDailyStatus(id, status);

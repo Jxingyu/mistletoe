@@ -6,6 +6,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +36,7 @@ public class UserController {
      * @param user
      * @throws IOException
      */
+
     @GetMapping("/findAll")
     @PreAuthorize("hasAuthority('user:list')")
     public void findAll(HttpServletResponse response,User user) throws IOException {

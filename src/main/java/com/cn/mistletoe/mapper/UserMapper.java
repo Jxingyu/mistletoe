@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cn.mistletoe.model.UserTeamRelation;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 
 /**
@@ -53,4 +54,6 @@ public interface UserMapper extends BaseMapper<User> {
     String selectTeamNameByNumbers(Integer numbers);
 
     String selectUsernameByUserId(Integer userId);
+
+    void insertLoginRecords(Map map);
 }

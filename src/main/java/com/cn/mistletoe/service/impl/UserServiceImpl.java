@@ -1,5 +1,6 @@
 package com.cn.mistletoe.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.cn.mistletoe.common.CommonResult;
 import com.cn.mistletoe.common.JwtTokenUtil;
 import com.cn.mistletoe.mapper.UserRoleRelationMapper;
@@ -10,12 +11,16 @@ import com.cn.mistletoe.model.UserTeamRelation;
 import com.cn.mistletoe.service.RedisService;
 import com.cn.mistletoe.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
@@ -55,6 +60,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      */
     private RedisService redisService;
 
+    /**
+     * rmq
+     */
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+    /**
+     * 注入日志用交换机
+     */
+    @Autowired
+    private DirectExchange logExchange;
+    /**
+     * 注入绑定 获取路由键用
+     */
+    @Autowired
+    Binding LoginLogQueueToLogExchange;
+
 
     @Value("${jwt.tokenHeader}")//Authorization  from -- application.yml
     private String tokenHeader;
@@ -73,7 +94,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
 //    @Cacheable(key = "#user")// 变量 引用下面的形参id // 使用 springCache的注解实现缓存
-    public CommonResult login(User loginParams) {
+    public CommonResult login(User loginParams, HttpServletRequest request) {
         String username = loginParams.getUsername();
         Assert.notNull(username, "登录账号不能为空");
         String password = loginParams.getPassword();
@@ -112,6 +133,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 map.put("bearer", tokenHead);
                 map.put("Authorization", tokenHeader);
                 map.put("generaToken", generateTokenOne);
+                HashMap<Object, Object> loginLogMap = new HashMap<>();
+                loginLogMap.put("username", username);
+                String remoteAddr = request.getRemoteAddr();//获取IP RabbitMq用
+                loginLogMap.put("ip", remoteAddr);
+                String loginLog = JSON.toJSONString(loginLogMap);//转为JSON RabbitMq用
+                rabbitTemplate.convertAndSend(logExchange.getName(), LoginLogQueueToLogExchange.getRoutingKey(), loginLog);
                 return CommonResult.success(map, "TokenSuccess");
             }
         }

@@ -6,6 +6,8 @@ import com.cn.mistletoe.model.User;
 import com.cn.mistletoe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -26,8 +28,8 @@ public class LoginController {
     private UserService userService;
 
     @PostMapping("/check")
-    public void login(@RequestBody User user, HttpSession session, HttpServletResponse resp) throws IOException {
-        CommonResult result = (CommonResult) userService.login(user);
+    public void login(@RequestBody User user, HttpSession session, HttpServletRequest request, HttpServletResponse resp) throws IOException {
+        CommonResult result = (CommonResult) userService.login(user, request);
         String utilCode = (String) session.getAttribute("code");//拿到后台生成的验证码与用户传入model的验证码对比用
 //            if (utilCode.equalsIgnoreCase(user.getCode())) {// equalsIgnoreCase 不区分大小写对比
         if (utilCode.equals(user.getCaptcha())) {
@@ -41,12 +43,12 @@ public class LoginController {
                 jsonObject.put("result", result.getData());
                 resp.getWriter().println(jsonObject);
             }// 冻结场合
-            if (result.getMessage().equals("Account has been frozen 24 h")){
+            if (result.getMessage().equals("Account has been frozen 24 h")) {
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("result", result.getMessage());
                 resp.getWriter().println(jsonObject);
             }// 未冻结状态下 登录账号或者密码错误场合
-            if (result.getMessage().equals("failed")){
+            if (result.getMessage().equals("failed")) {
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("result", result.getMessage());
                 resp.getWriter().println(jsonObject);

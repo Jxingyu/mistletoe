@@ -6,6 +6,7 @@ import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cn.mistletoe.model.UserTeamRelation;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Vector;
 
@@ -19,7 +20,7 @@ import java.util.Vector;
  */
 public interface UserService extends IService<User> {
 
-    Object login(User user);
+    Object login(User user, HttpServletRequest request);
 
     User getUserByUsername(String username);
 

@@ -36,6 +36,14 @@ jwt:
   tokenHeader: Authorization
 #  {Authorization: "bearer jghrwg5thfdsfsrr0asfdagsdf"}
 
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+
+queue:
+  loginLog:
+    name: LoginLogQueue
 #打印sql
 logging:
   level:
