@@ -6,6 +6,7 @@ import com.cn.mistletoe.model.Permission;
 import com.cn.mistletoe.model.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cn.mistletoe.model.UserTeamRelation;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -55,5 +56,5 @@ public interface UserMapper extends BaseMapper<User> {
 
     String selectUsernameByUserId(Integer userId);
 
-    void insertLoginRecords(Map map);
+    void insertLoginRecords(@Param("userName") String userName, @Param("pcName") String pcName, @Param("pcIp") String pcIp, @Param("loginDate") String loginDate);
 }

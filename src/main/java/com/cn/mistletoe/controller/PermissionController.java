@@ -9,6 +9,7 @@ import com.cn.mistletoe.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class PermissionController {
 
     @Autowired
     PermissionService permissionService;
+
     @GetMapping("/selectPermission")
     public void selectPermission(HttpServletResponse response) throws IOException {
         List list = permissionService.selectPermission();
@@ -40,9 +42,10 @@ public class PermissionController {
     }
 
     /**
-     *  权限模块--权限分配窗口查看
-     * 	将角色信息存与权限信息存入redis(角色名字+权限信息)
-     *  每小时更新一次redis中的角色与权限信息
+     * 权限模块--权限分配窗口查看
+     * 将角色信息存与权限信息存入redis(角色名字+权限信息)
+     * 每小时更新一次redis中的角色与权限信息
+     *
      * @param id
      * @param response
      * @throws IOException
@@ -59,6 +62,7 @@ public class PermissionController {
 
     /**
      * 查询当前角色rpr关联表数据
+     *
      * @param id
      * @param response
      * @throws IOException
@@ -75,6 +79,7 @@ public class PermissionController {
     /**
      * 权限模块——左边权限插入右边
      * 权限关联表 数据insert 可改为update
+     *
      * @param rpr
      * @param response
      * @throws IOException
@@ -91,13 +96,14 @@ public class PermissionController {
 
     /**
      * 权限模块——权限分配 右边数据删除左边
+     *
      * @param rpr
      * @return
      */
     @PostMapping("/deleteRpr")
     @PreAuthorize("hasAuthority('permission:delete')")// 权限删除
-    public CommonResult deleteRpr(@RequestBody List<RolePermissionRelation>rpr){
+    public CommonResult deleteRpr(@RequestBody List<RolePermissionRelation> rpr) {
         Integer integer = permissionService.deleteRpr(rpr);
-        return CommonResult.success(integer,"delSuccess");
+        return CommonResult.success(integer, "delSuccess");
     }
 }

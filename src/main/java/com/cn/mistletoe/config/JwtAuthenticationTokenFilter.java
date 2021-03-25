@@ -53,6 +53,10 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         //从 header  中获取 Authorization
             String authHeader = request.getHeader(this.tokenHeader);// tokenBody格式: "bearer jghrwg5thfdsfsrr0asfdagsdf" -- from -- application.yml
         // 判断 authHeader  不为空  并且以 bearer 开头
+//        String servletPath = request.getServletPath();
+//        if (servletPath .equals( "/login/check")){
+//            chain.doFilter(request, response);
+//        }
         if (authHeader != null) {
             boolean b1 = StringUtils.startsWithIgnoreCase(authHeader,this.tokenHead);// startsWithIgnoreCase -- 判断字符以什么开头 忽略大小写 // 以 tokenHead: bearer 开头
             if (b1) {

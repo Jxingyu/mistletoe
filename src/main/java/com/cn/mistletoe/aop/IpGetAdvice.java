@@ -1,6 +1,7 @@
 package com.cn.mistletoe.aop;
 
 import ch.qos.logback.classic.util.LogbackMDCAdapter;
+import com.cn.mistletoe.common.DateUtils;
 import com.cn.mistletoe.mapper.UserMapper;
 import com.cn.mistletoe.model.LoginRecodes;
 import com.cn.mistletoe.model.User;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -58,7 +60,7 @@ public class IpGetAdvice {
         List list = Collections.singletonList(parameterList.get(0));
 
         List<User> list1 = list;
-        System.out.println(list1);
+//        System.out.println(list1);
         for (int i = 0; i < list1.size(); i++) {
 //            Object[] a = (Object[]) list1.get(i);
             User a = list1.get(i);
@@ -68,14 +70,10 @@ public class IpGetAdvice {
             LoginRecodes loginRecodes = new LoginRecodes();
             loginRecodes.setUserName(username1);
             String userName = loginRecodes.getUserName();
-            System.out.println(userName);
+            String loginDate = DateUtils.getCurrentDay();
+            userMapper.insertLoginRecords(userName,pcName,pcIp,loginDate);// 插入登录记录相关信息
         }
 
-
-        Map map = new HashMap();
-//        map.put("parameter", x);
-        map.put("pcIp", pcIp);
-        map.put("pcName", pcName);
 //        userMapper.insertLoginRecords(map);
 
         // 其实使用InetAddress.getLocalHost()获取ip存在问题，因为有的电脑有多个网卡，也就有多个ip地址，正确的方法应该是这样
@@ -95,6 +93,6 @@ public class IpGetAdvice {
         for (String string : result) {
             System.out.println(string);
         }*/
-        return map;
+        return proceed;
     }
 }

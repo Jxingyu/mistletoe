@@ -33,6 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+
                 .antMatchers("/css/**", "/js/**", "/fonts/**", "/login/check", "/code", "/register/check", "/user/registerIconUpdate"
                         , "/utr/select/user", "/utr/select/userByTeamId", "/utr/selectUtr", "/utr/insertUserTeam", "/utr/deleteUtrIdInUtr"
                         , "/utr/select/captain", "/utr/select/NowCaptain", "/utr/selectUcr", "/team/findTeamById"

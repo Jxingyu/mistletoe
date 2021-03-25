@@ -20,6 +20,16 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: mistletoe_back_2.0
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+    cluster-nodes: 127.0.0.1:9300 # es的连接地址及端口号
+    cluster-name: es # es集群的名称
+    client:
+      reactive:
+        socket-timeout: 16000
+
 #生成用
 #mybatis-plus:
 #  type-aliases-package: com.cn.mistletoe.model

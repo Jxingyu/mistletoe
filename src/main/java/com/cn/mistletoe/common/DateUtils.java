@@ -30,7 +30,7 @@ public class DateUtils  {
         calendar.setTime(date);
         // 在当前日基础上+1，前一天-1，当天0
         calendar.add(Calendar.DAY_OF_MONTH, 0);
-        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd 00:00:00");
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return format.format(calendar.getTime());
     }
 

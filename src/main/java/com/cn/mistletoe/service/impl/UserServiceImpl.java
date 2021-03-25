@@ -135,10 +135,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 map.put("generaToken", generateTokenOne);
                 HashMap<Object, Object> loginLogMap = new HashMap<>();
                 loginLogMap.put("username", username);
-                String remoteAddr = request.getRemoteAddr();//获取IP RabbitMq用
-                loginLogMap.put("ip", remoteAddr);
-                String loginLog = JSON.toJSONString(loginLogMap);//转为JSON RabbitMq用
-                rabbitTemplate.convertAndSend(logExchange.getName(), LoginLogQueueToLogExchange.getRoutingKey(), loginLog);
+//                String remoteAddr = request.getRemoteAddr();//获取IP RabbitMq用
+//                loginLogMap.put("ip", remoteAddr);
+//                String loginLog = JSON.toJSONString(loginLogMap);//转为JSON RabbitMq用
+//                rabbitTemplate.convertAndSend(logExchange.getName(), LoginLogQueueToLogExchange.getRoutingKey(), loginLog);
                 return CommonResult.success(map, "TokenSuccess");
             }
         }
