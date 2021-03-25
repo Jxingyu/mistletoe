@@ -1,0 +1,531 @@
+2021-03-25 09:24:35.038 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:35.055 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:35.087 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:37.985 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==>  Preparing: INSERT INTO login_recodes (user_number,user_name,login_date,login_pc,login_ip) VALUES ((SELECT id FROM user WHERE username = ?),?,?,?,?) 
+2021-03-25 09:24:37.986 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==> Parameters: admin(String), admin(String), 2021-03-25 09:24:37(String), Jxy-O834IQKJDUP(String), 192.168.0.33(String)
+2021-03-25 09:24:38.035 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - <==    Updates: 1
+2021-03-25 09:24:39.313 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.313 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.315 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.315 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.315 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.321 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.342 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==>  Preparing: select * from user where 1 = 1 
+2021-03-25 09:24:39.342 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==> Parameters: 
+2021-03-25 09:24:39.347 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - <==      Total: 21
+2021-03-25 09:24:39.391 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.392 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.393 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.393 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.393 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.397 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.405 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==>  Preparing: select * from role where 1 = 1 and id != 7 
+2021-03-25 09:24:39.405 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==> Parameters: 
+2021-03-25 09:24:39.407 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - <==      Total: 5
+2021-03-25 09:24:39.504 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.504 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.506 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.507 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.507 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.510 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.537 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.TeamRecordMapper.findTeamRecord - ==>  Preparing: select * from team_record order by id desc limit 0,50; 
+2021-03-25 09:24:39.537 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.TeamRecordMapper.findTeamRecord - ==> Parameters: 
+2021-03-25 09:24:39.541 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.TeamRecordMapper.findTeamRecord - <==      Total: 32
+2021-03-25 09:24:39.569 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.570 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.571 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.571 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.571 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.574 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.581 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.TeamMapper.findTeamAll - ==>  Preparing: select * from team where 1 = 1; 
+2021-03-25 09:24:39.581 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.TeamMapper.findTeamAll - ==> Parameters: 
+2021-03-25 09:24:39.582 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.TeamMapper.findTeamAll - <==      Total: 3
+2021-03-25 09:24:39.600 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.600 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.601 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.602 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.602 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.605 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.620 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:24:39.621 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:24:39.623 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:24:39.624 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:24:39.624 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:24:39.626 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:24:39.635 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.636 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.637 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.637 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.638 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.640 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.643 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:24:39.643 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:24:39.644 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:24:39.645 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:24:39.645 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:24:39.646 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:24:39.698 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.698 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.699 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.699 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.700 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.702 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.710 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==>  Preparing: SELECT * FROM sign WHERE 1 = 1 limit ?,? 
+2021-03-25 09:24:39.711 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==> Parameters: 0(Integer), 10(Integer)
+2021-03-25 09:24:39.712 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - <==      Total: 10
+2021-03-25 09:24:39.712 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==>  Preparing: SELECT count(*) FROM sign 
+2021-03-25 09:24:39.713 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==> Parameters: 
+2021-03-25 09:24:39.713 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - <==      Total: 1
+2021-03-25 09:24:39.722 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.722 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.723 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.723 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.724 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.725 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.728 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==>  Preparing: SELECT * FROM sign WHERE 1 = 1 limit ?,? 
+2021-03-25 09:24:39.728 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==> Parameters: 0(Integer), 10(Integer)
+2021-03-25 09:24:39.730 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - <==      Total: 10
+2021-03-25 09:24:39.731 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==>  Preparing: SELECT count(*) FROM sign 
+2021-03-25 09:24:39.731 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==> Parameters: 
+2021-03-25 09:24:39.731 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - <==      Total: 1
+2021-03-25 09:24:39.739 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.740 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.740 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.741 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.741 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.742 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.745 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:24:39.745 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:24:39.746 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:24:39.746 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:24:39.747 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:24:39.747 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:24:39.757 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.757 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.758 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.758 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.758 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.760 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.762 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:24:39.762 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:24:39.762 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:24:39.762 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:24:39.762 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:24:39.763 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:24:39.775 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:39.775 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:39.776 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:39.776 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:39.776 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:39.778 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:39.805 [http-nio-8081-exec-2] DEBUG c.c.m.m.LoginRecodesMapper.SelectAllLoginRecodes - ==>  Preparing: SELECT * FROM login_recodes WHERE 1 = 1 
+2021-03-25 09:24:39.805 [http-nio-8081-exec-2] DEBUG c.c.m.m.LoginRecodesMapper.SelectAllLoginRecodes - ==> Parameters: 
+2021-03-25 09:24:39.806 [http-nio-8081-exec-2] DEBUG c.c.m.m.LoginRecodesMapper.SelectAllLoginRecodes - <==      Total: 10
+2021-03-25 09:24:54.766 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:54.766 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:54.767 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:54.767 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:54.767 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:54.768 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:54.777 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==>  Preparing: SELECT id FROM user WHERE username = ? 
+2021-03-25 09:24:54.777 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==> Parameters: admin(String)
+2021-03-25 09:24:54.778 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - <==      Total: 1
+2021-03-25 09:24:54.784 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:54.785 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:54.785 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:54.785 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:54.786 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:54.787 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:54.790 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyAll - ==>  Preparing: SELECT * FROM daily WHERE user_id = ? 
+2021-03-25 09:24:54.790 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyAll - ==> Parameters: 3(Integer)
+2021-03-25 09:24:54.794 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyAll - <==      Total: 1
+2021-03-25 09:24:56.800 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:56.800 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:56.801 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:56.801 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:56.801 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:56.803 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:56.804 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==>  Preparing: SELECT id FROM user WHERE username = ? 
+2021-03-25 09:24:56.804 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==> Parameters: admin(String)
+2021-03-25 09:24:56.805 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - <==      Total: 1
+2021-03-25 09:24:56.812 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:24:56.812 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:24:56.813 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:24:56.813 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:24:56.813 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:24:56.815 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:24:56.817 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.DailyMapper.ReviewDailyAll - ==>  Preparing: SELECT * FROM daily 
+2021-03-25 09:24:56.817 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.DailyMapper.ReviewDailyAll - ==> Parameters: 
+2021-03-25 09:24:56.819 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.DailyMapper.ReviewDailyAll - <==      Total: 6
+2021-03-25 09:25:12.574 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:25:12.574 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:25:12.575 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:25:12.575 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:25:12.575 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:25:12.577 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:25:12.578 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==>  Preparing: SELECT id FROM user WHERE username = ? 
+2021-03-25 09:25:12.578 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==> Parameters: admin(String)
+2021-03-25 09:25:12.579 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - <==      Total: 1
+2021-03-25 09:25:12.585 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:25:12.585 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:25:12.586 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:25:12.586 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:25:12.587 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:25:12.588 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:25:12.590 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyAll - ==>  Preparing: SELECT * FROM daily WHERE user_id = ? 
+2021-03-25 09:25:12.590 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyAll - ==> Parameters: 3(Integer)
+2021-03-25 09:25:12.590 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyAll - <==      Total: 1
+2021-03-25 09:27:03.436 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:03.436 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:03.437 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:03.437 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:03.437 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:03.439 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:03.441 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==>  Preparing: select * from user where 1 = 1 
+2021-03-25 09:27:03.441 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==> Parameters: 
+2021-03-25 09:27:03.443 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - <==      Total: 21
+2021-03-25 09:27:04.198 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:04.198 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:04.198 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:04.199 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:04.199 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:04.199 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:04.202 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==>  Preparing: select * from role where 1 = 1 and id != 7 
+2021-03-25 09:27:04.202 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==> Parameters: 
+2021-03-25 09:27:04.203 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - <==      Total: 5
+2021-03-25 09:27:09.903 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:09.903 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:09.904 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:09.904 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:09.904 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:09.906 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:09.908 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==>  Preparing: select * from user where 1 = 1 
+2021-03-25 09:27:09.908 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==> Parameters: 
+2021-03-25 09:27:09.909 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - <==      Total: 21
+2021-03-25 09:27:11.710 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:11.710 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:11.711 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:11.711 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:11.712 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:11.713 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:11.715 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.RoleMapper.findRoleNameById - ==>  Preparing: select * from role 
+2021-03-25 09:27:11.716 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.RoleMapper.findRoleNameById - ==> Parameters: 
+2021-03-25 09:27:11.718 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.RoleMapper.findRoleNameById - <==      Total: 6
+2021-03-25 09:27:11.725 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:11.726 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:11.726 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:11.726 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:11.727 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:11.728 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:11.730 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.RoleMapper.findNowRoleByUserId - ==>  Preparing: SELECT * FROM role WHERE role.id in ( SELECT ur.role_id FROM user_role_relation AS ur WHERE ur.user_id = ?) 
+2021-03-25 09:27:11.731 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.RoleMapper.findNowRoleByUserId - ==> Parameters: 123(Integer)
+2021-03-25 09:27:11.731 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.RoleMapper.findNowRoleByUserId - <==      Total: 1
+2021-03-25 09:27:15.387 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:15.387 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:15.388 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:15.388 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:15.388 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:15.389 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:15.391 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==>  Preparing: select * from role where 1 = 1 and id != 7 
+2021-03-25 09:27:15.391 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==> Parameters: 
+2021-03-25 09:27:15.392 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - <==      Total: 5
+2021-03-25 09:27:17.032 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:17.032 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:17.032 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:17.033 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:17.033 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:17.034 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:17.036 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==>  Preparing: select * from role where 1 = 1 and id != 7 
+2021-03-25 09:27:17.036 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==> Parameters: 
+2021-03-25 09:27:17.036 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - <==      Total: 5
+2021-03-25 09:27:20.733 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:20.734 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:20.734 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:20.735 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:20.735 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:20.736 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:20.738 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:20.738 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:27:20.740 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:20.740 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:20.740 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:20.741 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:20.753 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:20.753 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:20.754 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:20.755 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:20.755 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:20.757 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:20.760 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:20.760 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:27:20.761 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:20.762 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:20.762 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:20.762 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:22.624 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:22.625 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:22.626 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:22.626 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:22.626 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:22.628 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:22.631 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:22.631 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 5(Integer), 5(Integer)
+2021-03-25 09:27:22.632 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:22.633 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:22.633 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:22.633 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:23.546 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:23.547 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:23.548 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:23.548 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:23.548 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:23.550 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:23.554 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:23.554 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 10(Integer), 5(Integer)
+2021-03-25 09:27:23.555 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:23.555 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:23.555 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:23.555 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:24.385 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:24.385 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:24.385 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:24.387 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:24.387 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:24.388 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:24.391 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:24.391 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 5(Integer), 5(Integer)
+2021-03-25 09:27:24.393 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:24.394 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:24.394 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:24.394 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:27.642 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:27.642 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:27.643 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:27.643 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:27.643 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:27.646 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:27.648 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:27.649 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:27:27.651 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:27.651 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:27.651 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:27.652 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:28.354 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:28.355 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:28.356 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:28.356 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:28.356 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:28.358 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:28.361 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:28.362 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 5(Integer), 5(Integer)
+2021-03-25 09:27:28.363 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:28.363 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:28.363 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:28.364 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:29.164 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:29.164 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:29.165 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:29.166 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:29.166 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:29.168 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:29.171 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:29.171 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 10(Integer), 5(Integer)
+2021-03-25 09:27:29.172 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:29.172 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:29.172 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:29.173 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:30.169 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:30.170 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:30.171 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:30.171 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:30.171 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:30.173 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:30.193 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:30.193 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 15(Integer), 5(Integer)
+2021-03-25 09:27:30.194 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:30.194 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:30.194 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:30.195 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:31.420 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:31.420 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:31.421 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:31.421 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:31.421 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:31.423 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:31.426 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:31.426 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 10(Integer), 5(Integer)
+2021-03-25 09:27:31.427 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:31.427 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:31.427 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:31.428 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:31.869 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:31.869 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:31.870 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:31.870 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:31.870 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:31.871 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:31.873 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:31.873 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 5(Integer), 5(Integer)
+2021-03-25 09:27:31.874 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:31.874 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:31.874 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:31.875 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:32.072 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:32.072 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:32.073 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:32.074 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:32.074 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:32.076 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:32.080 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:32.080 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:27:32.082 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:32.082 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:32.082 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:32.083 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:32.267 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:32.267 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:32.268 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:32.268 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:32.269 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:32.270 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:32.273 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:32.273 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:27:32.275 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:32.275 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:32.275 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:32.276 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:33.791 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:33.792 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:33.793 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:33.793 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:33.793 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:33.795 [http-nio-8081-exec-1] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:33.799 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:33.799 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 5(Integer), 5(Integer)
+2021-03-25 09:27:33.800 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:33.801 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:33.801 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:33.801 [http-nio-8081-exec-1] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:34.451 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:34.452 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:34.453 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:34.453 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:34.453 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:34.455 [http-nio-8081-exec-3] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:34.458 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:34.458 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 10(Integer), 5(Integer)
+2021-03-25 09:27:34.458 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:34.459 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:34.459 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:34.459 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:35.102 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:35.102 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:35.103 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:35.103 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:35.103 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:35.104 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:35.105 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:35.105 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 15(Integer), 5(Integer)
+2021-03-25 09:27:35.106 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:35.106 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:35.106 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:35.107 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:35.636 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:35.637 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:35.638 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:35.638 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:35.638 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:35.640 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:35.642 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:35.643 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 20(Integer), 5(Integer)
+2021-03-25 09:27:35.643 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 1
+2021-03-25 09:27:35.644 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:35.644 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:35.644 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:36.950 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:36.950 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:36.951 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:36.951 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:36.952 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:36.953 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:36.956 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:36.956 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 15(Integer), 5(Integer)
+2021-03-25 09:27:36.957 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:27:36.957 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:36.957 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:36.958 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:38.024 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:38.024 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:38.025 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:38.025 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:38.025 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:38.026 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:38.028 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerById - ==>  Preparing: select * from user where id = ? 
+2021-03-25 09:27:38.028 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerById - ==> Parameters: 130(Integer)
+2021-03-25 09:27:38.029 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerById - <==      Total: 1
+2021-03-25 09:27:51.972 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:51.972 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:51.974 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:51.974 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:51.974 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:51.975 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:51.978 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:27:51.978 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 20(Integer), 5(Integer)
+2021-03-25 09:27:51.979 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 1
+2021-03-25 09:27:51.979 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:27:51.979 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:27:51.980 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:27:54.359 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:27:54.359 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:27:54.360 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:27:54.360 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:27:54.360 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:27:54.361 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:27:54.363 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerById - ==>  Preparing: select * from user where id = ? 
+2021-03-25 09:27:54.364 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerById - ==> Parameters: 133(Integer)
+2021-03-25 09:27:54.364 [http-nio-8081-exec-4] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerById - <==      Total: 1
+2021-03-25 09:28:16.354 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:28:16.354 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:28:16.355 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:28:16.356 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:28:16.356 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:28:16.357 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:28:16.360 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:28:16.360 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 20(Integer), 5(Integer)
+2021-03-25 09:28:16.361 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 0
+2021-03-25 09:28:16.361 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:28:16.361 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:28:16.362 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:28:18.109 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:28:18.109 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:28:18.110 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:28:18.110 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:28:18.111 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:28:18.112 [http-nio-8081-exec-8] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:28:18.115 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:28:18.115 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 15(Integer), 5(Integer)
+2021-03-25 09:28:18.116 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:28:18.116 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:28:18.116 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:28:18.117 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:28:20.532 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:28:20.532 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:28:20.534 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:28:20.534 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:28:20.534 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:28:20.535 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:28:20.538 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-25 09:28:20.538 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-25 09:28:20.540 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-25 09:28:20.540 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-25 09:28:20.540 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-25 09:28:20.541 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-25 09:28:23.342 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-25 09:28:23.342 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-25 09:28:23.343 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-25 09:28:23.343 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-25 09:28:23.343 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-25 09:28:23.344 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-25 09:28:23.345 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==>  Preparing: select * from user where 1 = 1 
+2021-03-25 09:28:23.346 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==> Parameters: 
+2021-03-25 09:28:23.347 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - <==      Total: 20

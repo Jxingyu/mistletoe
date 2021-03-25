@@ -1,0 +1,756 @@
+2021-03-24 10:00:00.647 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 10:00:00.666 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 10:00:00.715 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 10:00:00.728 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.728 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 10:00:00.742 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 10:00:00.744 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.744 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 10:00:00.748 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 10:00:00.749 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.749 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 10:00:00.751 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 10:00:00.752 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.752 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 10:00:00.754 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 10:00:00.755 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.755 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 10:00:00.758 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 10:00:00.759 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.759 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 10:00:00.760 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 10:00:00.829 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.829 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 10:00:00.830 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 10:00:00.834 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.835 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 10:00:00.836 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 10:00:00.837 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.838 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 10:00:00.840 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 10:00:00.841 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.841 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 10:00:00.843 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 10:00:00.844 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.844 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 10:00:00.847 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 10:00:00.848 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 10:00:00.848 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 10:00:00.849 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 10:00:00.855 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 10:00:00.855 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 10:00:00.858 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 10:05:58.975 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:05:58.992 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:05:59.020 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:10:08.122 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:10:08.122 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:10:08.125 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:10:13.639 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:10:13.639 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:10:13.641 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:13:18.831 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:13:18.850 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:13:18.870 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:13:59.868 [http-nio-8081-exec-2] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:13:59.887 [http-nio-8081-exec-2] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:13:59.936 [http-nio-8081-exec-2] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:14:17.622 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:14:17.622 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:14:17.624 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:14:50.045 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:14:50.045 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:14:50.048 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:14:54.223 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:14:54.224 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:14:54.229 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:14:56.321 [http-nio-8081-exec-5] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:14:56.321 [http-nio-8081-exec-5] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:14:56.324 [http-nio-8081-exec-5] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:16:23.117 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:16:23.138 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:16:23.157 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:16:36.955 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:16:36.955 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:16:36.957 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:17:26.753 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:17:26.769 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:17:26.787 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:26:14.055 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:26:14.071 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:26:14.089 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 10:42:40.031 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 10:42:40.047 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 10:42:40.085 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 11:00:00.686 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 11:00:00.686 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 11:00:00.691 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 11:00:00.705 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.705 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 11:00:00.709 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 11:00:00.711 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.711 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 11:00:00.714 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 11:00:00.715 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.715 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 11:00:00.716 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 11:00:00.717 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.717 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 11:00:00.720 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 11:00:00.721 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.721 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 11:00:00.723 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 11:00:00.725 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.725 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 11:00:00.726 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 11:00:00.779 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.780 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 11:00:00.781 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 11:00:00.788 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.788 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 11:00:00.790 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 11:00:00.791 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.791 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 11:00:00.794 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 11:00:00.795 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.795 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 11:00:00.797 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 11:00:00.798 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.798 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 11:00:00.802 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 11:00:00.803 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 11:00:00.803 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 11:00:00.804 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 11:00:00.809 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 11:00:00.809 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 11:00:00.812 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 11:17:33.181 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 11:17:33.181 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 11:17:33.187 [http-nio-8081-exec-4] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 11:45:09.090 [http-nio-8081-exec-7] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 11:45:09.090 [http-nio-8081-exec-7] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 11:45:09.094 [http-nio-8081-exec-7] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 11:53:24.791 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 11:53:24.807 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 11:53:24.826 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 11:54:50.568 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 11:54:50.583 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 11:54:50.602 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:00:00.573 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 12:00:00.573 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 12:00:00.578 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 12:00:00.589 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.589 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 12:00:00.592 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 12:00:00.594 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.594 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 12:00:00.597 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 12:00:00.598 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.598 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 12:00:00.600 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 12:00:00.600 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.601 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 12:00:00.602 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 12:00:00.603 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.603 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 12:00:00.606 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 12:00:00.607 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.607 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 12:00:00.607 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 12:00:00.665 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.666 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 12:00:00.667 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 12:00:00.671 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.671 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 12:00:00.673 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 12:00:00.673 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.673 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 12:00:00.675 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 12:00:00.676 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.676 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 12:00:00.678 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 12:00:00.678 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.678 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 12:00:00.681 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 12:00:00.682 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 12:00:00.682 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 12:00:00.682 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 12:00:00.687 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 12:00:00.688 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 12:00:00.691 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 12:17:36.421 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:17:36.436 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:17:36.454 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:19:40.398 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:19:40.414 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:19:40.432 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:20:13.742 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:20:13.742 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:20:13.745 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:49:21.513 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:49:21.513 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:49:21.516 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:49:26.222 [http-nio-8081-exec-8] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:49:26.222 [http-nio-8081-exec-8] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:49:26.225 [http-nio-8081-exec-8] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:52:37.463 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:52:37.463 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:52:37.466 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 12:52:47.191 [http-nio-8081-exec-5] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 12:52:47.191 [http-nio-8081-exec-5] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 12:52:47.194 [http-nio-8081-exec-5] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 13:00:00.644 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 13:00:00.644 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 13:00:00.655 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 13:00:00.668 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.669 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 13:00:00.673 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 13:00:00.674 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.675 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 13:00:00.677 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 13:00:00.678 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.678 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 13:00:00.681 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 13:00:00.681 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.682 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 13:00:00.684 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 13:00:00.684 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.684 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 13:00:00.687 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 13:00:00.688 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.688 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 13:00:00.689 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 13:00:00.741 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.741 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 13:00:00.743 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 13:00:00.749 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.749 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 13:00:00.751 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 13:00:00.752 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.752 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 13:00:00.755 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 13:00:00.757 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.757 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 13:00:00.759 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 13:00:00.760 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.760 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 13:00:00.762 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 13:00:00.763 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 13:00:00.763 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 13:00:00.764 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 13:00:00.769 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 13:00:00.769 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 13:00:00.772 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 14:19:06.939 [http-nio-8081-exec-7] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:19:06.959 [http-nio-8081-exec-7] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:19:07.018 [http-nio-8081-exec-7] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:19:39.913 [http-nio-8081-exec-10] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:19:39.913 [http-nio-8081-exec-10] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:19:39.915 [http-nio-8081-exec-10] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:19:46.871 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:19:46.872 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:19:46.875 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:25:06.634 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:25:06.671 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:25:06.690 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:25:26.329 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:25:26.329 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:25:26.332 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:27:13.476 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:27:13.476 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:27:13.479 [http-nio-8081-exec-6] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:36:37.721 [http-nio-8081-exec-9] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:36:37.721 [http-nio-8081-exec-9] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:36:37.724 [http-nio-8081-exec-9] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 14:51:38.775 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 14:51:38.791 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 14:51:38.829 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 19
+2021-03-24 15:00:00.642 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 15:00:00.658 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 15:00:00.707 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 15:00:00.720 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.721 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 15:00:00.740 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 15:00:00.744 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.744 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 15:00:00.746 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 15:00:00.747 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.747 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 15:00:00.750 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 15:00:00.750 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.751 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 15:00:00.752 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 15:00:00.753 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.753 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 15:00:00.756 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 15:00:00.757 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.757 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 15:00:00.758 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 15:00:00.816 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.816 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 15:00:00.818 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 15:00:00.823 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.823 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 15:00:00.825 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 15:00:00.826 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.826 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 15:00:00.828 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 15:00:00.828 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.829 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 15:00:00.831 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 15:00:00.832 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.832 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 15:00:00.834 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 15:00:00.835 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 15:00:00.835 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 15:00:00.836 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 15:00:00.840 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 15:00:00.840 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 15:00:00.843 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 15:48:10.269 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 15:48:10.290 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 15:48:10.327 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 6
+2021-03-24 15:48:10.587 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 15:48:10.588 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 15:48:10.589 [http-nio-8081-exec-3] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 6
+2021-03-24 15:53:05.091 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 15:53:05.107 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 15:53:05.123 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 6
+2021-03-24 16:00:00.622 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 16:00:00.622 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 16:00:00.625 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 16:00:00.637 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.637 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 16:00:00.640 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 16:00:00.642 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.642 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 16:00:00.644 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 16:00:00.645 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.645 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 16:00:00.647 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 16:00:00.648 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.648 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 16:00:00.650 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 16:00:00.651 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.651 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 16:00:00.654 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 16:00:00.654 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.654 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 16:00:00.655 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 16:00:00.697 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.697 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 16:00:00.699 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 16:00:00.709 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.709 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 16:00:00.711 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 16:00:00.712 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.712 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 16:00:00.714 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 16:00:00.715 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.715 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 16:00:00.718 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 16:00:00.718 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.719 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 16:00:00.722 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 16:00:00.723 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 16:00:00.724 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 16:00:00.724 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 16:00:00.729 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 16:00:00.729 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 16:00:00.731 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 16:05:10.459 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==>  Preparing: SELECT * FROM login_recodes 
+2021-03-24 16:05:10.476 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - ==> Parameters: 
+2021-03-24 16:05:10.511 [http-nio-8081-exec-1] DEBUG c.c.m.m.L.importLoginRecodesFromSqlToEs - <==      Total: 6
+2021-03-24 17:00:00.615 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 17:00:00.633 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 17:00:00.667 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 17:00:00.697 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.697 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 17:00:00.709 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 17:00:00.711 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.711 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 17:00:00.714 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 17:00:00.715 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.715 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 17:00:00.717 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 17:00:00.718 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.718 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 17:00:00.720 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 17:00:00.721 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.721 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 17:00:00.724 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 17:00:00.725 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.725 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 17:00:00.725 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 17:00:00.755 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.755 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 17:00:00.756 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 17:00:00.760 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.760 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 17:00:00.762 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 17:00:00.763 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.763 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 17:00:00.765 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 17:00:00.765 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.765 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 17:00:00.767 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 17:00:00.769 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.769 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 17:00:00.772 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 17:00:00.773 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 17:00:00.773 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 17:00:00.774 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 17:00:00.777 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 17:00:00.777 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 17:00:00.780 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 17:51:49.901 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 17:51:49.902 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 17:51:49.909 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 17:54:24.006 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 17:54:24.022 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 17:54:24.039 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 17:55:20.163 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 17:55:20.164 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 17:55:20.171 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 17:56:05.007 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 17:56:05.008 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 17:56:05.014 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 18:00:00.023 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 18:00:00.023 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 18:00:00.025 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 18:00:00.037 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.037 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 18:00:00.040 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 18:00:00.042 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.042 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 18:00:00.066 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 18:00:00.067 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.067 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 18:00:00.069 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 18:00:00.070 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.070 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 18:00:00.072 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 18:00:00.073 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.073 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 18:00:00.076 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 18:00:00.077 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.077 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 18:00:00.077 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 18:00:00.096 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.097 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 18:00:00.098 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 18:00:00.102 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.102 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 18:00:00.104 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 18:00:00.105 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.105 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 18:00:00.107 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 18:00:00.108 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.108 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 18:00:00.110 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 18:00:00.111 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.111 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 18:00:00.113 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 18:00:00.114 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 18:00:00.115 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 18:00:00.116 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 18:00:00.121 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 18:00:00.121 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 18:00:00.124 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 18:10:31.528 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 18:10:31.544 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 18:10:31.563 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 18:12:14.528 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 18:12:14.544 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 18:12:14.562 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 18:14:50.333 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 18:14:50.353 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 18:14:50.374 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:05:39.840 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:05:39.857 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:05:39.884 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:06:20.880 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:06:20.895 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:06:20.911 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:13:15.599 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:13:15.614 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:13:15.631 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:30:00.275 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:30:00.291 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:30:00.324 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:31:38.370 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:31:38.370 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:31:38.372 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:32:02.564 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:32:02.564 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:32:02.571 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:32:52.930 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:32:52.930 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:32:52.936 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:35:04.913 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:35:04.913 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:35:04.915 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:40:52.548 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:40:52.549 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:40:52.550 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:41:34.171 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.register - ==>  Preparing: insert into user (username,sex,phone,address,create_time,status,password) values(?,?,?,?,?,?,?) 
+2021-03-24 19:41:34.173 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.register - ==> Parameters: sadsadas(String), 女(String), 124(String), 12(String), 2021-03-21T19:41(LocalDateTime), 1(Integer), $2a$10$G/BjmvTtQLwdzDTnL6lWE.F7eqwiqmBzmIRewTGoUdN6u8lH3RKH6(String)
+2021-03-24 19:41:34.191 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.register - <==    Updates: 1
+2021-03-24 19:41:34.191 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.getMaxId - ==>  Preparing: select max(id) from user; 
+2021-03-24 19:41:34.191 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.getMaxId - ==> Parameters: 
+2021-03-24 19:41:34.193 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.getMaxId - <==      Total: 1
+2021-03-24 19:41:34.193 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.urrInsert - ==>  Preparing: insert into user_role_relation (user_id,role_id) values(?,7) 
+2021-03-24 19:41:34.193 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.urrInsert - ==> Parameters: 133(Integer)
+2021-03-24 19:41:34.221 [http-nio-8081-exec-8] DEBUG com.cn.mistletoe.mapper.UserMapper.urrInsert - <==    Updates: 1
+2021-03-24 19:44:09.422 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:44:09.438 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: asdasd(String)
+2021-03-24 19:44:09.467 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 0
+2021-03-24 19:45:04.516 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:45:04.547 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: asd(String)
+2021-03-24 19:45:04.560 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 0
+2021-03-24 19:46:03.346 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:46:03.347 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:46:03.363 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:50:46.661 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:50:46.693 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:50:46.709 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:51:36.013 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:51:36.029 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: zxc(String)
+2021-03-24 19:51:36.059 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 0
+2021-03-24 19:52:42.496 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:52:42.511 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:52:42.527 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:55:13.007 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:55:13.008 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:55:13.015 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 19:57:31.199 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 19:57:31.199 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 19:57:31.201 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:00:00.010 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==>  Preparing: select * from role where 1 = 1 
+2021-03-24 20:00:00.010 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - ==> Parameters: 
+2021-03-24 20:00:00.017 [scheduling-1] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAllRoles - <==      Total: 6
+2021-03-24 20:00:00.049 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.049 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 20:00:00.057 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 20:00:00.059 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.059 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 20:00:00.062 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 20:00:00.063 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.063 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:00:00.067 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 20:00:00.068 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.068 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 20:00:00.070 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 20:00:00.071 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.071 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 20:00:00.074 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 20:00:00.075 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.075 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 20:00:00.076 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 20:00:00.099 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.100 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 1(Integer)
+2021-03-24 20:00:00.102 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 12
+2021-03-24 20:00:00.105 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.106 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 2(Integer)
+2021-03-24 20:00:00.107 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 14
+2021-03-24 20:00:00.108 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.109 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:00:00.111 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 20
+2021-03-24 20:00:00.113 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.113 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 4(Integer)
+2021-03-24 20:00:00.115 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 19
+2021-03-24 20:00:00.115 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.116 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 6(Integer)
+2021-03-24 20:00:00.118 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 36
+2021-03-24 20:00:00.119 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==>  Preparing: select permission.* from permission left join role_permission_relation on role_permission_relation.permission_id = permission.id where role_permission_relation.role_id = ? 
+2021-03-24 20:00:00.119 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - ==> Parameters: 7(Integer)
+2021-03-24 20:00:00.121 [scheduling-1] DEBUG c.c.m.m.R.findPermissionsByRoleId - <==      Total: 1
+2021-03-24 20:00:00.125 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==>  Preparing: select permission.* from permission where 1=1 
+2021-03-24 20:00:00.126 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - ==> Parameters: 
+2021-03-24 20:00:00.128 [scheduling-1] DEBUG c.c.m.m.R.findAllPermission - <==      Total: 36
+2021-03-24 20:00:09.165 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:00:09.165 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:00:09.166 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:03:36.035 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:03:36.220 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:03:36.362 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:09:37.074 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:09:37.251 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: 陈亦蕴(String)
+2021-03-24 20:09:37.394 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:11:53.214 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==>  Preparing: SELECT id FROM user WHERE username = ? 
+2021-03-24 20:11:53.215 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==> Parameters: (String)
+2021-03-24 20:11:53.215 [http-nio-8081-exec-3] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - <==      Total: 0
+2021-03-24 20:11:54.116 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==>  Preparing: SELECT id FROM user WHERE username = ? 
+2021-03-24 20:11:54.116 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - ==> Parameters: (String)
+2021-03-24 20:11:54.117 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.DailyMapper.selectDailyId - <==      Total: 0
+2021-03-24 20:13:49.818 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:13:49.998 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:13:50.138 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:16:01.550 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:16:01.566 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admn(String)
+2021-03-24 20:16:01.579 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 0
+2021-03-24 20:16:22.452 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:16:22.453 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:16:22.468 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:16:58.728 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:16:58.728 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:16:58.729 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:17:26.563 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:17:26.564 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:17:26.565 [http-nio-8081-exec-1] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:18:03.931 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:18:03.932 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:18:03.937 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:18:31.971 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:18:31.971 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:18:31.978 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:22:24.416 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:22:24.616 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:22:24.774 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:25:21.655 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:25:21.656 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:25:21.663 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:31:31.878 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:31:32.063 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:31:32.210 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:37:54.476 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:37:54.662 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:37:54.810 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:38:29.059 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:38:29.060 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:38:29.068 [http-nio-8081-exec-8] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:39:35.625 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:39:35.642 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:39:35.659 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:39:37.343 [http-nio-8081-exec-4] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==>  Preparing: INSERT INTO login_recodes (user_number,user_name,login_date,login_pc,login_ip) VALUES ((SELECT id FROM user WHERE username = ?),?,?,?,?) 
+2021-03-24 20:39:37.343 [http-nio-8081-exec-4] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==> Parameters: admin(String), admin(String), 2021-03-24 20:39:37(String), Jxy-O834IQKJDUP(String), 192.168.0.33(String)
+2021-03-24 20:39:37.389 [http-nio-8081-exec-4] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - <==    Updates: 1
+2021-03-24 20:40:33.538 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:40:33.715 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:40:33.856 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:40:38.796 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==>  Preparing: INSERT INTO login_recodes (user_number,user_name,login_date,login_pc,login_ip) VALUES ((SELECT id FROM user WHERE username = ?),?,?,?,?) 
+2021-03-24 20:40:38.796 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==> Parameters: admin(String), admin(String), 2021-03-24 20:40:38(String), Jxy-O834IQKJDUP(String), 192.168.0.33(String)
+2021-03-24 20:40:38.864 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - <==    Updates: 1
+2021-03-24 20:41:31.168 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:31.183 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:31.199 [http-nio-8081-exec-3] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:33.631 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==>  Preparing: INSERT INTO login_recodes (user_number,user_name,login_date,login_pc,login_ip) VALUES ((SELECT id FROM user WHERE username = ?),?,?,?,?) 
+2021-03-24 20:41:33.631 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - ==> Parameters: admin(String), admin(String), 2021-03-24 20:41:33(String), Jxy-O834IQKJDUP(String), 192.168.0.33(String)
+2021-03-24 20:41:33.711 [http-nio-8081-exec-3] DEBUG c.c.mistletoe.mapper.UserMapper.insertLoginRecords - <==    Updates: 1
+2021-03-24 20:41:36.259 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:36.259 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:36.260 [http-nio-8081-exec-5] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:36.260 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:36.261 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:36.266 [http-nio-8081-exec-5] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:36.287 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==>  Preparing: select * from user where 1 = 1 
+2021-03-24 20:41:36.287 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - ==> Parameters: 
+2021-03-24 20:41:36.292 [http-nio-8081-exec-5] DEBUG com.cn.mistletoe.mapper.UserMapper.findAll - <==      Total: 21
+2021-03-24 20:41:37.400 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:37.400 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:37.400 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:37.400 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:37.400 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:37.404 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:37.427 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==>  Preparing: select * from role where 1 = 1 and id != 7 
+2021-03-24 20:41:37.427 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - ==> Parameters: 
+2021-03-24 20:41:37.428 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.RoleMapper.findAll - <==      Total: 5
+2021-03-24 20:41:38.901 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:38.902 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:38.902 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:38.903 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:38.903 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:38.906 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:38.920 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-24 20:41:38.920 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-24 20:41:38.922 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-24 20:41:38.922 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-24 20:41:38.922 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-24 20:41:38.924 [http-nio-8081-exec-9] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-24 20:41:38.936 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:38.936 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:38.938 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:38.938 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:38.938 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:38.942 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:38.946 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-24 20:41:38.946 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-24 20:41:38.948 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-24 20:41:38.948 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-24 20:41:38.949 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-24 20:41:38.949 [http-nio-8081-exec-10] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-24 20:41:40.031 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:40.032 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:40.033 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:40.034 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:40.034 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:40.037 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:40.044 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.TeamMapper.findTeamAll - ==>  Preparing: select * from team where 1 = 1; 
+2021-03-24 20:41:40.044 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.TeamMapper.findTeamAll - ==> Parameters: 
+2021-03-24 20:41:40.049 [http-nio-8081-exec-2] DEBUG com.cn.mistletoe.mapper.TeamMapper.findTeamAll - <==      Total: 3
+2021-03-24 20:41:40.531 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:40.531 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:40.532 [http-nio-8081-exec-4] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:40.532 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:40.533 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:40.535 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:40.541 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.TeamRecordMapper.findTeamRecord - ==>  Preparing: select * from team_record order by id desc limit 0,50; 
+2021-03-24 20:41:40.542 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.TeamRecordMapper.findTeamRecord - ==> Parameters: 
+2021-03-24 20:41:40.547 [http-nio-8081-exec-4] DEBUG c.c.m.mapper.TeamRecordMapper.findTeamRecord - <==      Total: 32
+2021-03-24 20:41:42.013 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:42.013 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:42.014 [http-nio-8081-exec-6] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:42.014 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:42.015 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:42.017 [http-nio-8081-exec-6] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:42.019 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-24 20:41:42.019 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-24 20:41:42.020 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-24 20:41:42.021 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-24 20:41:42.021 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-24 20:41:42.021 [http-nio-8081-exec-6] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-24 20:41:42.034 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:42.034 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:42.035 [http-nio-8081-exec-7] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:42.035 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:42.035 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:42.037 [http-nio-8081-exec-7] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:42.039 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==>  Preparing: select * from user where 1 = 1 limit ?,? 
+2021-03-24 20:41:42.040 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - ==> Parameters: 0(Integer), 5(Integer)
+2021-03-24 20:41:42.041 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findPlayerAll - <==      Total: 5
+2021-03-24 20:41:42.041 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==>  Preparing: select count(*) from user 
+2021-03-24 20:41:42.041 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - ==> Parameters: 
+2021-03-24 20:41:42.041 [http-nio-8081-exec-7] DEBUG com.cn.mistletoe.mapper.UserMapper.findTotalCount - <==      Total: 1
+2021-03-24 20:41:42.442 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:42.443 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:42.443 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:42.444 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:42.444 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:42.445 [http-nio-8081-exec-9] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:42.471 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==>  Preparing: SELECT * FROM sign WHERE 1 = 1 limit ?,? 
+2021-03-24 20:41:42.472 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==> Parameters: 0(Integer), 10(Integer)
+2021-03-24 20:41:42.475 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - <==      Total: 10
+2021-03-24 20:41:42.476 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==>  Preparing: SELECT count(*) FROM sign 
+2021-03-24 20:41:42.476 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==> Parameters: 
+2021-03-24 20:41:42.476 [http-nio-8081-exec-9] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - <==      Total: 1
+2021-03-24 20:41:42.493 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:41:42.493 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:41:42.494 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:41:42.494 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:41:42.494 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:41:42.496 [http-nio-8081-exec-10] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:41:42.498 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==>  Preparing: SELECT * FROM sign WHERE 1 = 1 limit ?,? 
+2021-03-24 20:41:42.498 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - ==> Parameters: 0(Integer), 10(Integer)
+2021-03-24 20:41:42.500 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.SignMapper.selectSignRecord - <==      Total: 10
+2021-03-24 20:41:42.500 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==>  Preparing: SELECT count(*) FROM sign 
+2021-03-24 20:41:42.500 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - ==> Parameters: 
+2021-03-24 20:41:42.501 [http-nio-8081-exec-10] DEBUG c.cn.mistletoe.mapper.SignMapper.selectTotalCount - <==      Total: 1
+2021-03-24 20:42:03.540 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==>  Preparing: select * from mistletoe.user where username=?; 
+2021-03-24 20:42:03.541 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - ==> Parameters: admin(String)
+2021-03-24 20:42:03.541 [http-nio-8081-exec-2] DEBUG c.cn.mistletoe.mapper.UserMapper.getUserByUsername - <==      Total: 1
+2021-03-24 20:42:03.541 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==>  Preparing: select * from permission as p where p.id in ( select rpr.permission_id from role_permission_relation AS rpr where rpr.role_id = (select urr.role_id from user_role_relation AS urr where urr.user_id = ?) ) 
+2021-03-24 20:42:03.541 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - ==> Parameters: 3(Integer)
+2021-03-24 20:42:03.544 [http-nio-8081-exec-2] DEBUG c.c.m.mapper.UserMapper.getPermissionByRoleId - <==      Total: 35
+2021-03-24 20:42:03.550 [http-nio-8081-exec-2] DEBUG c.c.m.m.LoginRecodesMapper.SelectAllLoginRecodes - ==>  Preparing: SELECT * FROM login_recodes WHERE 1 = 1 
+2021-03-24 20:42:03.550 [http-nio-8081-exec-2] DEBUG c.c.m.m.LoginRecodesMapper.SelectAllLoginRecodes - ==> Parameters: 
+2021-03-24 20:42:03.550 [http-nio-8081-exec-2] DEBUG c.c.m.m.LoginRecodesMapper.SelectAllLoginRecodes - <==      Total: 9

@@ -1,0 +1,440 @@
+2021-03-19 16:04:10.332 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 13420 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:04:10.334 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:04:11.061 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:04:11.063 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:04:11.102 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2021-03-19 16:04:11.426 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f19c33' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:04:11.430 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:04:11.446 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$8ed1446d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:04:11.694 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:04:11.707 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:04:11.708 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:04:11.708 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:04:11.884 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:04:11.884 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1476 ms
+2021-03-19 16:04:12.586 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:04:13.187 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:04:15.366 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d6a20, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e801b5, org.springframework.security.web.header.HeaderWriterFilter@8d619c, org.springframework.web.filter.CorsFilter@1d0b918, org.springframework.security.web.authentication.logout.LogoutFilter@bc308b, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@794f53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4de63b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@159c3f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f72909, org.springframework.security.web.session.SessionManagementFilter@169fc07, org.springframework.security.web.access.ExceptionTranslationFilter@12c8bda, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1dfcf9]
+2021-03-19 16:04:15.493 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:04:15.947 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:04:16.030 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:04:16.047 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:04:16.058 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 6.145 seconds (JVM running for 6.992)
+2021-03-19 16:04:47.503 [http-nio-8081-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:04:47.503 [http-nio-8081-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:04:47.509 [http-nio-8081-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-03-19 16:04:47.578 [http-nio-8081-exec-3] INFO  c.cn.mistletoe.config.JwtAuthenticationTokenFilter - checking username:陈亦蕴
+2021-03-19 16:04:47.653 [http-nio-8081-exec-3] INFO  c.cn.mistletoe.config.JwtAuthenticationTokenFilter - authenticated user:陈亦蕴
+2021-03-19 16:04:48.364 [http-nio-8081-exec-3] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2021-03-19 16:04:48.390 [http-nio-8081-exec-3] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1bca84d:0/SimpleConnection@5f6c2 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53407]
+2021-03-19 16:04:49.456 [http-nio-8081-exec-5] INFO  c.cn.mistletoe.config.JwtAuthenticationTokenFilter - checking username:admin
+2021-03-19 16:04:49.464 [http-nio-8081-exec-5] INFO  c.cn.mistletoe.config.JwtAuthenticationTokenFilter - authenticated user:admin
+2021-03-19 16:04:49.515 [http-nio-8081-exec-7] INFO  c.cn.mistletoe.config.JwtAuthenticationTokenFilter - checking username:admin
+2021-03-19 16:04:49.521 [http-nio-8081-exec-7] INFO  c.cn.mistletoe.config.JwtAuthenticationTokenFilter - authenticated user:admin
+2021-03-19 16:24:08.849 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:24:08.850 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:24:08.990 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:24:08.997 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:24:14.817 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 3424 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:24:14.820 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:24:15.797 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:24:15.799 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:24:15.836 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-03-19 16:24:16.207 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d7881e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:24:16.213 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:24:16.223 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$5dc8c0ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:24:16.508 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:24:16.515 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:24:16.516 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:24:16.516 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:24:16.628 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:24:16.628 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1733 ms
+2021-03-19 16:24:16.790 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:24:16.928 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:24:18.781 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a6384b, org.springframework.security.web.context.SecurityContextPersistenceFilter@f33d25, org.springframework.security.web.header.HeaderWriterFilter@173e4d5, org.springframework.web.filter.CorsFilter@695b23, org.springframework.security.web.authentication.logout.LogoutFilter@b96c1e, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@3c4d16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fa04b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d558bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ee8174, org.springframework.security.web.session.SessionManagementFilter@4af370, org.springframework.security.web.access.ExceptionTranslationFilter@f61cd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f23335]
+2021-03-19 16:24:18.801 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:24:18.926 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:24:19.379 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:24:19.487 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:24:19.512 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:24:19.513 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:24:19.530 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:24:19.567 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:24:19.789 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:24:19.832 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:24:19.900 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.535 seconds (JVM running for 6.424)
+2021-03-19 16:26:03.011 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:26:03.011 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:26:03.019 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2021-03-19 16:27:53.657 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:27:53.659 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:27:53.676 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:27:53.680 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:27:57.939 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 1952 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:27:57.942 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:27:58.915 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:27:58.917 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:27:58.955 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2021-03-19 16:27:59.340 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3ff233' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:27:59.344 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:27:59.361 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$565fccdd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:27:59.619 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:27:59.626 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:27:59.627 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:27:59.627 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:27:59.738 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:27:59.738 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1723 ms
+2021-03-19 16:27:59.905 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:28:00.048 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:28:01.894 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bf9fd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1897c6, org.springframework.security.web.header.HeaderWriterFilter@14d0a14, org.springframework.web.filter.CorsFilter@b2e4d8, org.springframework.security.web.authentication.logout.LogoutFilter@cb5200, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@13361e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d558bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d0fac9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11e5ffa, org.springframework.security.web.session.SessionManagementFilter@15da2db, org.springframework.security.web.access.ExceptionTranslationFilter@d2c80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a6384b]
+2021-03-19 16:28:01.913 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:28:02.034 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:28:02.466 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:28:02.553 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:28:02.571 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:28:02.572 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:28:02.584 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:28:02.611 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:28:02.775 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:28:02.811 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:28:02.851 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.382 seconds (JVM running for 6.268)
+2021-03-19 16:28:04.820 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:28:04.821 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:28:04.827 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-03-19 16:29:38.067 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:29:38.068 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:29:38.083 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:29:38.088 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:29:42.659 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 3884 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:29:42.662 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:29:43.781 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:29:43.782 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:29:43.817 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2021-03-19 16:29:44.170 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1d42542' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:29:44.174 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:29:44.190 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$e55824b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:29:44.448 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:29:44.455 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:29:44.456 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:29:44.456 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:29:44.571 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:29:44.571 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1838 ms
+2021-03-19 16:29:44.765 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:29:44.921 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:29:46.686 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13546f9, org.springframework.security.web.context.SecurityContextPersistenceFilter@31abe9, org.springframework.security.web.header.HeaderWriterFilter@140568e, org.springframework.web.filter.CorsFilter@a10069, org.springframework.security.web.authentication.logout.LogoutFilter@316230, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@1849604, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1acda9a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a7d3d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ecef36, org.springframework.security.web.session.SessionManagementFilter@afecfd, org.springframework.security.web.access.ExceptionTranslationFilter@ef30b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1826475]
+2021-03-19 16:29:46.704 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:29:46.821 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:29:47.235 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:29:47.320 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:29:47.338 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:29:47.339 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:29:47.351 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:29:47.381 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:29:47.543 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:29:47.591 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:29:47.632 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.457 seconds (JVM running for 6.404)
+2021-03-19 16:29:55.916 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:29:55.916 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:29:55.922 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-03-19 16:35:09.384 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:35:09.385 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:35:09.402 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:35:09.407 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:35:13.670 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 3452 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:35:13.672 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:35:14.597 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:35:14.599 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:35:14.635 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2021-03-19 16:35:14.994 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1041b7d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:35:15.001 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:35:15.019 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$47b01db6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:35:15.275 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:35:15.283 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:35:15.283 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:35:15.284 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:35:15.393 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:35:15.393 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1652 ms
+2021-03-19 16:35:15.552 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:35:15.686 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:35:17.520 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18ba69f, org.springframework.security.web.context.SecurityContextPersistenceFilter@157889c, org.springframework.security.web.header.HeaderWriterFilter@2718b3, org.springframework.web.filter.CorsFilter@3c4d16, org.springframework.security.web.authentication.logout.LogoutFilter@80a896, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@1fca349, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e92505, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@142466e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c4fda, org.springframework.security.web.session.SessionManagementFilter@1a9541c, org.springframework.security.web.access.ExceptionTranslationFilter@1fbc2bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ceac99]
+2021-03-19 16:35:17.539 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:35:17.659 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:35:18.092 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:35:18.176 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:35:18.194 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:35:18.195 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:35:18.208 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:35:18.236 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:35:18.405 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:35:18.441 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:35:18.500 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.267 seconds (JVM running for 6.159)
+2021-03-19 16:35:21.736 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:35:21.736 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:35:21.742 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-03-19 16:36:21.225 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:36:21.226 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:36:21.242 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:36:21.247 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:36:25.579 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 11928 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:36:25.581 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:36:26.562 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:36:26.563 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:36:26.604 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2021-03-19 16:36:26.975 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@c1519e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:36:26.981 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:36:26.999 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$3c8af16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:36:27.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:36:27.339 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:36:27.340 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:36:27.340 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:36:27.458 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:36:27.458 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1801 ms
+2021-03-19 16:36:27.632 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:36:27.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:36:29.588 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fd6f63, org.springframework.security.web.context.SecurityContextPersistenceFilter@16e6fa5, org.springframework.security.web.header.HeaderWriterFilter@1556a88, org.springframework.web.filter.CorsFilter@d81f2c, org.springframework.security.web.authentication.logout.LogoutFilter@2ca1e2, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@1b59c3d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11a1005, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cffc05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@106f982, org.springframework.security.web.session.SessionManagementFilter@12ce817, org.springframework.security.web.access.ExceptionTranslationFilter@5dc246, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e74eef]
+2021-03-19 16:36:29.621 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:36:29.755 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:36:30.257 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:36:30.371 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:36:30.394 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:36:30.395 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:36:30.409 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:36:30.473 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:36:30.632 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:36:30.678 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:36:30.727 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.608 seconds (JVM running for 6.55)
+2021-03-19 16:46:44.726 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:46:44.728 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:46:44.743 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:46:44.761 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:46:49.190 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 2352 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:46:49.193 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:46:50.158 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:46:50.160 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:46:50.198 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-03-19 16:46:50.537 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@132c7a5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:46:50.542 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:46:50.553 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$53b3c6b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:46:50.807 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:46:50.815 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:46:50.815 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:46:50.815 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:46:50.926 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:46:50.926 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1656 ms
+2021-03-19 16:46:51.079 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:46:51.218 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:46:52.967 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c2e473, org.springframework.security.web.context.SecurityContextPersistenceFilter@17cc325, org.springframework.security.web.header.HeaderWriterFilter@97f51c, org.springframework.web.filter.CorsFilter@1c7619, org.springframework.security.web.authentication.logout.LogoutFilter@167d9b9, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@3c4d16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ca1e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b2a11a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ebfb2d, org.springframework.security.web.session.SessionManagementFilter@173e4d5, org.springframework.security.web.access.ExceptionTranslationFilter@1e92505, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1881b7a]
+2021-03-19 16:46:52.996 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:46:53.119 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:46:53.557 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:46:53.648 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:46:53.666 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:46:53.667 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:46:53.693 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:46:53.721 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:46:53.879 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:46:53.931 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:46:53.972 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.3 seconds (JVM running for 6.24)
+2021-03-19 16:46:57.852 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:46:57.853 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:46:57.858 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2021-03-19 16:47:25.474 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:47:25.475 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:47:25.490 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:47:25.495 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:47:29.653 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 13324 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:47:29.655 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:47:30.583 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:47:30.585 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:47:30.621 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2021-03-19 16:47:30.957 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39baf0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:47:30.961 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:47:30.971 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$ab75b244] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:47:31.233 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:47:31.240 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:47:31.241 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:47:31.241 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:47:31.356 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:47:31.357 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1632 ms
+2021-03-19 16:47:31.521 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:47:31.655 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:47:33.394 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e5ddc0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1394966, org.springframework.security.web.header.HeaderWriterFilter@3bf37c, org.springframework.web.filter.CorsFilter@d058a, org.springframework.security.web.authentication.logout.LogoutFilter@167f57, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@f7ac25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3727b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b58ff4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ab69d9, org.springframework.security.web.session.SessionManagementFilter@97f51c, org.springframework.security.web.access.ExceptionTranslationFilter@85dc2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a6bd01]
+2021-03-19 16:47:33.413 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:47:33.543 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:47:33.976 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:47:34.067 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:47:34.085 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:47:34.085 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:47:34.097 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:47:34.126 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:47:34.297 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:47:34.335 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:47:34.375 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.146 seconds (JVM running for 5.937)
+2021-03-19 16:47:37.418 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:47:37.418 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:47:37.424 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-03-19 16:48:33.407 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:48:33.408 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:48:33.423 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:48:33.428 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:48:37.652 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 5168 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:48:37.655 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:48:38.592 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:48:38.595 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:48:38.642 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-03-19 16:48:38.973 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f443a3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:48:38.978 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:48:38.995 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$6c6a56c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:48:39.258 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:48:39.265 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:48:39.266 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:48:39.266 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:48:39.379 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:48:39.379 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1652 ms
+2021-03-19 16:48:39.538 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:48:39.672 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:48:41.462 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9514ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ddaffb, org.springframework.security.web.header.HeaderWriterFilter@1e1dce6, org.springframework.web.filter.CorsFilter@a1e49a, org.springframework.security.web.authentication.logout.LogoutFilter@7f6ab5, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@19b4f9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31abe9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cc31df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4254b6, org.springframework.security.web.session.SessionManagementFilter@10e3fb4, org.springframework.security.web.access.ExceptionTranslationFilter@6c8854, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13546f9]
+2021-03-19 16:48:41.483 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:48:41.621 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:48:42.061 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:48:42.153 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:48:42.172 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:48:42.173 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:48:42.199 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:48:42.229 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:48:42.393 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:48:42.447 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:48:42.486 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.262 seconds (JVM running for 6.169)
+2021-03-19 16:49:41.899 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:49:41.899 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:49:41.906 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2021-03-19 16:50:40.436 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 4076 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:50:40.439 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:50:41.564 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:50:41.566 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:50:41.618 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31ms. Found 0 Redis repository interfaces.
+2021-03-19 16:50:42.016 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@51d054' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:42.020 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:42.033 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$6dc0234c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:42.356 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:50:42.363 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:42.364 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:50:42.364 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:50:42.483 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:50:42.484 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1983 ms
+2021-03-19 16:50:42.647 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:50:42.716 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 8224 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:50:42.719 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:50:42.851 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:50:43.878 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:50:43.880 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:50:43.928 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 0 Redis repository interfaces.
+2021-03-19 16:50:44.346 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1486211' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:44.352 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:44.364 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$1c223ad9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:44.654 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@963be, org.springframework.security.web.context.SecurityContextPersistenceFilter@747037, org.springframework.security.web.header.HeaderWriterFilter@12a4332, org.springframework.web.filter.CorsFilter@2d71c7, org.springframework.security.web.authentication.logout.LogoutFilter@3b0d0f, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@15ab3f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1218a4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37fb82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13bf8db, org.springframework.security.web.session.SessionManagementFilter@b29ea8, org.springframework.security.web.access.ExceptionTranslationFilter@1152900, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1103745]
+2021-03-19 16:50:44.680 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:50:44.710 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:50:44.726 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:44.726 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:50:44.727 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:50:44.792 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:50:44.853 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:50:44.853 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2042 ms
+2021-03-19 16:50:45.053 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:50:45.212 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:50:45.282 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:50:45.473 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:45.507 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:50:45.508 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:50:45.522 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:50:45.572 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:50:45.784 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:50:45.832 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:50:45.876 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.837 seconds (JVM running for 6.59)
+2021-03-19 16:50:47.262 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c9f1ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@1581c3f, org.springframework.security.web.header.HeaderWriterFilter@225adb, org.springframework.web.filter.CorsFilter@d31d25, org.springframework.security.web.authentication.logout.LogoutFilter@91d4da, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@89b864, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ba9780, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bf37c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70c4ff, org.springframework.security.web.session.SessionManagementFilter@316230, org.springframework.security.web.access.ExceptionTranslationFilter@d52eda, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@683cf5]
+2021-03-19 16:50:47.281 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:50:47.410 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:50:47.837 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:50:47.925 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:47.934 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:50:47.935 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:50:47.952 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:50:47.956 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:50:47.959 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:47.959 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-03-19 16:50:47.964 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:47.965 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:47.969 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-19 16:50:53.319 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 6612 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:50:53.322 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:50:54.304 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:50:54.306 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:50:54.343 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2021-03-19 16:50:54.689 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1d620a1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:54.692 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:54.703 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$11929404] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:50:55.015 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:50:55.023 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:55.024 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:50:55.024 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:50:55.231 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:50:55.231 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1834 ms
+2021-03-19 16:50:55.397 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:50:55.550 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:50:57.324 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2310fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@12ce817, org.springframework.security.web.header.HeaderWriterFilter@5dc246, org.springframework.web.filter.CorsFilter@bc5be6, org.springframework.security.web.authentication.logout.LogoutFilter@17cc325, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@188a89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16e6fa5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8e50eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3263ba, org.springframework.security.web.session.SessionManagementFilter@94a35e, org.springframework.security.web.access.ExceptionTranslationFilter@d7b9c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44f1c3]
+2021-03-19 16:50:57.342 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:50:57.462 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:50:57.877 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:50:57.971 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:50:57.990 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:50:57.991 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:50:58.004 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:50:58.033 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:50:58.213 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:50:58.252 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:50:58.309 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.447 seconds (JVM running for 6.336)
+2021-03-19 16:50:58.995 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:50:58.996 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:50:59.005 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2021-03-19 16:58:37.078 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 16:58:37.080 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:58:37.111 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 16:58:37.116 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-03-19 16:58:41.604 [main] INFO  com.cn.mistletoe.MistletoeApp - Starting MistletoeApp on WIN-O834IQKJDUP with PID 4224 (D:\JavaProject\xingyu\springboot\mistletoe_back_2.0\target\classes started by Administrator in D:\JavaProject\xingyu\springboot\mistletoe_back_2.0)
+2021-03-19 16:58:41.606 [main] INFO  com.cn.mistletoe.MistletoeApp - No active profile set, falling back to default profiles: default
+2021-03-19 16:58:42.626 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 16:58:42.628 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 16:58:42.663 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2021-03-19 16:58:43.025 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@a2877c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:58:43.028 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:58:43.046 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.cn.mistletoe.config.RedisConfig$$EnhancerBySpringCGLIB$$ab75b244] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 16:58:43.321 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-03-19 16:58:43.329 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:58:43.329 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-19 16:58:43.330 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-19 16:58:43.443 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-19 16:58:43.444 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1760 ms
+2021-03-19 16:58:43.613 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-19 16:58:43.755 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-19 16:58:45.646 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b3fe8, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c81bc5, org.springframework.security.web.header.HeaderWriterFilter@6226ab, org.springframework.web.filter.CorsFilter@b2e4d8, org.springframework.security.web.authentication.logout.LogoutFilter@14b6999, com.cn.mistletoe.config.JwtAuthenticationTokenFilter@13361e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17168c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11559f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16d7e7c, org.springframework.security.web.session.SessionManagementFilter@80a896, org.springframework.security.web.access.ExceptionTranslationFilter@2ca1e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12ef402]
+2021-03-19 16:58:45.666 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 16:58:45.795 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 16:58:46.245 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-03-19 16:58:46.337 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2021-03-19 16:58:46.358 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-19 16:58:46.359 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-19 16:58:46.370 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-19 16:58:46.398 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-19 16:58:46.584 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: registerUsingPOST_1
+2021-03-19 16:58:46.622 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2021-03-19 16:58:46.679 [main] INFO  com.cn.mistletoe.MistletoeApp - Started MistletoeApp in 5.531 seconds (JVM running for 6.424)
+2021-03-19 16:59:00.287 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 16:59:00.287 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-19 16:59:00.294 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2021-03-19 17:02:32.376 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-03-19 17:02:32.392 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 17:02:32.642 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-03-19 17:02:32.657 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
